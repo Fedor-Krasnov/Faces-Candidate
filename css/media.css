@@ -1,5 +1,3 @@
-
-
 @media screen and (max-width: 540px) {
     .jobs_grid {
         grid-template-columns: 1fr;
