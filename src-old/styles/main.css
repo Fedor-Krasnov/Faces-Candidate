@@ -1,5 +1,5 @@
-@import "../css/reset.css";
-@import "../css/style.css";
-@import "../css/fonts.css";
-@import "../css/media.css";
+@import "/src-old/css/reset.scss";
+@import "/src-old/css/style.scss";
+@import "/src-old/css/fonts.scss";
+@import "/src-old/css/media.scss";
 @import "global/_header.css";
