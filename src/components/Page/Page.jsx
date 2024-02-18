@@ -1,6 +1,6 @@
 import React from 'react';
-import { Footer } from '../Footer/index.js';
-import { Header } from '../Header/index.js';
+import { Footer } from '../Footer';
+import { Header } from '../Header';
 
 const Page = ({ children }) => (
   <div>
