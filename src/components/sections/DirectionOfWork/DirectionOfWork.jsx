@@ -1,11 +1,6 @@
 import React from 'react';
+import './DirectionOfWork.scss';
 
-const DirectionOfWork = () => {
-  return (
-    <div>
+const DirectionOfWork = () => <div></div>;
 
-    </div>
-  );
-};
-
-export default DirectionOfWork;
+export { DirectionOfWork };

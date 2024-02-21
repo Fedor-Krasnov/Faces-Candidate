@@ -1,11 +1,6 @@
 import React from 'react';
+import './MainBanner.scss';
 
-const MainBanner = () => {
-  return (
-    <div>
+const MainBanner = () => <div></div>;
 
-    </div>
-  );
-};
-
-export default MainBanner;
+export { MainBanner };

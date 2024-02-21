@@ -1,11 +1,6 @@
 import React from 'react';
+import './CandidateDatabase.scss';
 
-const CandidateDatabase = () => {
-  return (
-    <div>
+const CandidateDatabase = () => <div></div>;
 
-    </div>
-  );
-};
-
-export default CandidateDatabase;
+export { CandidateDatabase };

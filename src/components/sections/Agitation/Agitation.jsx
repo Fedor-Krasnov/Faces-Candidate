@@ -1,11 +1,6 @@
 import React from 'react';
+import './Agitation.scss';
 
-const Agitation = () => {
-  return (
-    <div>
+const Agitation = () => <div></div>;
 
-    </div>
-  );
-};
-
-export default Agitation;
+export { Agitation };
