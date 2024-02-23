@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import iconsSvgPath from '../../../src/assets/media/icons/icon.svg';
+import iconsSvgPath from '../../../assets/media/icons/icon.svg';
 import './Icon.scss';
 
 export const IconCode = {};
