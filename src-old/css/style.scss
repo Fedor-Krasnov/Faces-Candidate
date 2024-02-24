@@ -15,23 +15,10 @@
   margin: auto;
 }
 
-.header {
-  display: grid;
-  align-items: center;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-        "logo navbar navbar search account"
-        "menu menu menu menu menu";
-}
-
 .logo {
   grid-area: logo;
 }
 
-.logo_link {
-  display: block;
-  padding-right: 24px;
-}
 
 .logo_img {
   height: 27px;
@@ -40,64 +27,6 @@
 
 .logo--mobile {
   display: none;
-}
-
-.navbar {
-  margin-right: auto;
-}
-
-.navbar_main {
-  grid-area: navbar;
-}
-
-.navbar_menu {
-  width: 100%;
-  grid-area: menu;
-  margin: 0 -12px;
-  padding-top: 12px;
-  border-top: 2px solid color.$really-slightly-darker-than-white;
-}
-
-.navbar_list {
-  display: flex;
-}
-
-.navbar_list--wrap {
-  flex-wrap: wrap;
-}
-
-.navbar_item {
-  opacity: 1;
-  transition: opacity .2s ease;
-}
-
-.navbar_item.hide {
-  opacity: 0;
-  user-select: none;
-  pointer-events: none;
-}
-
-.navbar_link {
-  color: color.$really-dark-blue;
-  padding: 12px;
-  position: relative;
-}
-
-.navbar_link::before {
-  content: '';
-  position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
-  height: 2px;
-  border-radius: 100px;
-  background-color: color.$light-yellow;
-  transform: scaleX(0);
-  transition: transform .5s ease;
-}
-
-.navbar_link:hover::before {
-  transform: scaleX(1);
 }
 
 .navbar-close {

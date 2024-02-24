@@ -1,17 +1,10 @@
 @use 'src/assets/styles/variables/color';
 
 .header {
-  display: grid;
-  align-items: center;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-        "logo navbar navbar search account"
-        "menu menu menu menu menu";
-}
-
-.logo_link {
-  display: block;
-  padding-right: 24px;
+  &__top-level {
+    display: flex;
+    width: 100%;
+  }
 }
 
 .navbar {
@@ -24,7 +17,6 @@
 
 .navbar_menu {
   width: 100%;
-  grid-area: menu;
   margin: 0 -12px;
   padding-top: 12px;
   border-top: 2px solid #E8E8E8;

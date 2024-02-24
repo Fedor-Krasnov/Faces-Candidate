@@ -1,0 +1,36 @@
+@use 'src/assets/styles/variables/color';
+
+.menu {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    opacity: 1;
+    transition: opacity .2s ease;
+  }
+
+  &__link {
+    color: color.$really-dark-blue;
+    padding: 12px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      height: 2px;
+      border-radius: 100px;
+      background-color: color.$light-yellow;
+      transform: scaleX(0);
+      transition: transform .5s ease;
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+    }
+  }
+}
