@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.scss';
-import { mainMenuData, subMenuData } from '../../mocks/components/menuData.js';
+import { mainMenuData, subMenuData } from '../../mocks';
 import { Logo } from '../units';
 import { Menu } from './Menu';
 import { SearchBox } from './SearchBox';
