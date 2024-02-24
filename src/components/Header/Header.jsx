@@ -1,7 +1,8 @@
 import React from 'react';
 import './Header.scss';
 import { headerData } from '../../mocks/components/headerData.js';
-import { Logo } from '../Units/Logo';
+import { Logo } from '../units';
+import { SearchBox } from './SearchBox';
 
 const Header = () => {
   const {} = headerData;
@@ -9,14 +10,7 @@ const Header = () => {
   return (
     <header className="header container" id="header">
       <Logo />
-      <div className="search_box">
-        <form action="" className="search_form">
-          <input className="search_field" placeholder="Поиск" type="text" />
-          <button className="search_btn" type="submit">
-            <img alt="найти" className="search_icon" src="/src/assets/media/icons/zoom.png" width="16" />
-          </button>
-        </form>
-      </div>
+      <SearchBox />
       <div className="navbar-close" id="navbar-close">
         <div className="hamburger">
           <span className="line"></span>

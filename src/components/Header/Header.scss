@@ -1,4 +1,4 @@
-@use "src/assets/styles/variables/color";
+@use 'src/assets/styles/variables/color';
 
 .header {
   display: grid;
@@ -119,24 +119,6 @@
   margin: 24px 20px 22px auto;
 }
 
-.search_field {
-  border: 2px solid color.$light-gray;
-  border-left: none;
-  outline: none;
-  font-size: 0.875em;
-  line-height: 1;
-  height: 32px;
-  order: 2;
-  padding: 0 10px;
-  border-radius: 0 32px 32px 0;
-  background-color: #fff;
-  transition: border .2s ease;
-}
-
-.search_field::placeholder {
-  color: #9CA3AF;
-}
-
 .search_form {
   display: flex;
   align-items: stretch;
@@ -159,7 +141,6 @@
   vertical-align: middle;
 }
 
-.search_field:focus,
 .search_field:focus + .search_btn {
   border-color: #FEE965;
 }
@@ -259,15 +240,14 @@
   }
 
   .navbar,
-  .search_field,
   .search_box,
   .account,
-  .account .btn {
+  .account,
+  .btn {
     width: 100%;
   }
 
-  .search_btn,
-  .search_field {
+  .search_btn {
     border: none;
     font-size: 16px;
     background-color: #E5E7EB;

@@ -1,0 +1,50 @@
+@use 'src/assets/styles/variables/color';
+
+.input {
+  $selector: &;
+
+  position: relative;
+
+  &_without-icon {
+    #{$selector}__field {
+      padding-left: 15px;
+    }
+  }
+
+  &__field {
+    border: 2px solid color.$light-gray;
+    outline: none;
+    font-size: 16px;
+    line-height: 1;
+    height: 32px;
+    padding: 0 15px 0 30px;
+    border-radius: 32px;
+    background-color: color.$white;
+    transition: border .2s ease;
+    width: 100%;
+
+    &::placeholder {
+      color: color.$light-gray;
+    }
+
+    &:focus {
+      border-color: color.$light-yellow;
+    }
+  }
+
+  &__icon-container {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 10px;
+    display: flex;
+  }
+
+  &__icon {
+    fill: color.$light-gray;
+  }
+}

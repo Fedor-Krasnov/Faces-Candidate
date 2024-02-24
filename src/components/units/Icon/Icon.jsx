@@ -1,11 +1,15 @@
 import React from 'react';
 import classNames from 'classnames';
-import iconsSvgPath from '../../../assets/media/icons/icon.svg';
+import iconsSvgPath from '../../../assets/media/icons/icons.svg';
 import './Icon.scss';
 
-export const IconCode = {};
+export const IconCode = {
+  zoom: 'zoom',
+};
 
-const iconCodeToSize = {};
+const iconCodeToSize = {
+  [IconCode.zoom]: [16, 16],
+};
 
 const iconClassName = 'icon';
 
