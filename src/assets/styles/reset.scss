@@ -1,21 +1,21 @@
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
-form, fieldset, input, p, blockquote, table, th, td, embed, object {
-  padding: 0;
-  margin: 0;
+* {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-fieldset, img, abbr {
-  border: 0;
-}
-
-address, caption, cite, code, dfn, em,
-h1, h2, h3, h4, h5, h6, strong, th, var {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: normal;
   font-style: normal;
 }
@@ -24,19 +24,7 @@ ul {
   list-style: none;
 }
 
-caption, th {
-  text-align: left;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: 1.0em;
-}
-
-q:before, q:after {
-  content: '';
-}
-
-a, ins {
+a {
   text-decoration: none;
 }
 
