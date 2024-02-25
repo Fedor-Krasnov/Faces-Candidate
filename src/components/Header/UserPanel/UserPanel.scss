@@ -1,0 +1,20 @@
+.user-panel {
+  &__user {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    justify-content: center;
+
+    span {
+      &:first-child {
+        background-color: #C7D2FE;
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        display: inherit;
+        align-items: inherit;
+        justify-content: inherit;
+      }
+    }
+  }
+}

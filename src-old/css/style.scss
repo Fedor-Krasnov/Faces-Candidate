@@ -85,23 +85,6 @@
   grid-area: account;
 }
 
-.btn {
-  border: 2px solid transparent;
-  background-color: transparent;
-  color: color.$really-dark-blue;
-  font-size: 1em;
-  line-height: 1;
-  padding: 10px 50px;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: background .2s ease, border .2s ease;
-}
-
-.btn-yellow {
-  background-color: color.$really-light-yellow-2;
-  border-color: color.$really-light-yellow-2;
-}
-
 .btn-outline-yellow:hover,
 .btn-yellow:hover {
   background-color: color.$light-yellow;

@@ -1,25 +1,18 @@
 @use 'src/assets/styles/variables/color';
 
 .button {
-  display: flex;
+  color: color.$really-dark-blue;
   font-size: 16px;
-  font-weight: 600;
-  font-family: 'Calibri', sans-serif;
-  justify-content: center;
-  align-items: center;
-  padding: 0 30px;
-  gap: 12px;
-  height: 60px;
-  background: color.$really-light-yellow-2;
-  border-radius: 20px;
-  color: color.$black;
+  line-height: 1;
+  padding: 10px 50px;
+  cursor: pointer;
+  transition: background .2s ease, border .2s ease;
+  background-color: color.$really-light-yellow-2;
   border: none;
-  width: max-content;
+  border-radius: 26px;
 
   &_outline {
-    font-size: 16px;
     background-color: transparent;
-    border-radius: 20px;
     border: 2px solid color.$really-light-yellow-2;
   }
 

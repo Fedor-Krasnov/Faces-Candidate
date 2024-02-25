@@ -4,28 +4,31 @@ import { mainMenuData, subMenuData } from '../../mocks';
 import { Logo } from '../units';
 import { Menu } from './Menu';
 import { SearchBox } from './SearchBox';
+import { UserPanel } from './UserPanel';
 
 const headerClassName = 'header';
 
-const Header = () => (
-  <header className={headerClassName}>
-    <div className={`${headerClassName}__top-level`}>
-      <Logo />
-      <Menu data={mainMenuData} />
-      <SearchBox />
-      <div className="account">
-        <button className="btn btn-yellow">Войти</button>
+const Header = () => {
+  const isLogged = true;
+
+  return (
+    <header className={headerClassName}>
+      <div className={`${headerClassName}__top-level`}>
+        <Logo />
+        <Menu data={mainMenuData} />
+        <SearchBox />
+        <UserPanel isLogged={isLogged} />
       </div>
-    </div>
-    <Menu data={subMenuData} />
-    <div className="navbar-close" id="navbar-close">
-      <div className="hamburger">
-        <span className="line"></span>
-        <span className="line"></span>
-        <span className="line"></span>
+      <Menu data={subMenuData} />
+      <div className="navbar-close" id="navbar-close">
+        <div className="hamburger">
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
+        </div>
       </div>
-    </div>
-  </header>
-);
+    </header>
+  );
+};
 
 export { Header };
