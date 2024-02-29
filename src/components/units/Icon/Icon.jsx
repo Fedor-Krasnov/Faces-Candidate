@@ -4,10 +4,14 @@ import iconsSvgPath from '../../../assets/media/icons/icons.svg';
 import './Icon.scss';
 
 export const IconCode = {
+  logoDesktop: 'logoDesktop',
+  logoMobile: 'logoMobile',
   zoom: 'zoom',
 };
 
 const iconCodeToSize = {
+  [IconCode.logoDesktop]: [175, 20],
+  [IconCode.logoMobile]: [35, 30],
   [IconCode.zoom]: [16, 16],
 };
 
