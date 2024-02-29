@@ -19,16 +19,7 @@ const UserPanel = ({ isLogged }) => {
   return (
     <div className={classNames(userPanelClassName, { [`${userPanelClassName}__is-logged`]: isLogged })}>
       {isLogged ? (
-        <>
-          <div className={`${userPanelClassName}__user`}>
-            <span>{getAbbrUser(user)}</span>
-            <span>{user}</span>
-          </div>
-          <div className={`${userPanelClassName}__popup`}>
-            <Link to={linkModalProfile}>Посмотреть профиль</Link>
-            <Link to={linkModalExit}>Выйти</Link>
-          </div>
-        </>
+
       ) : (
         <Button title="Войти" />
       )}

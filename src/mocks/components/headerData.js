@@ -1,4 +1,1 @@
-export const headerData = {
-  linkModalProfile: '#',
-  linkModalExit: '#',
-};
+export const headerData = {};
