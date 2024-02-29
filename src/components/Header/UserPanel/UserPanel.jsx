@@ -1,12 +1,15 @@
 import React from 'react';
 import './UserPanel.scss';
 import classNames from 'classnames';
+import { Link } from 'react-router-dom';
+import { headerData } from '../../../mocks/index.js';
 import { Button } from '../../units';
 
 const userPanelClassName = 'user-panel';
 const user = 'Fedor Krasnov';
 
 const UserPanel = ({ isLogged }) => {
+  const { linkModalProfile, linkModalExit } = headerData;
   const getAbbrUser = (user) => {
     const userArray = user.split(' ');
 
@@ -21,7 +24,10 @@ const UserPanel = ({ isLogged }) => {
             <span>{getAbbrUser(user)}</span>
             <span>{user}</span>
           </div>
-          <div></div>
+          <div className={`${userPanelClassName}__popup`}>
+            <Link to={linkModalProfile}>Посмотреть профиль</Link>
+            <Link to={linkModalExit}>Выйти</Link>
+          </div>
         </>
       ) : (
         <Button title="Войти" />

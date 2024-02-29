@@ -1,4 +1,18 @@
+@use 'src/assets/styles/variables/color';
+
 .user-panel {
+  $selector: &;
+
+  &__is-logged {
+    &:hover {
+      #{$selector}__popup {
+        opacity: 1;
+        visibility: visible;
+        translate: none;
+      }
+    }
+  }
+
   &__user {
     display: flex;
     align-items: center;
@@ -16,5 +30,22 @@
         justify-content: inherit;
       }
     }
+  }
+
+  &__popup {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    background-color: color.$white;
+    padding: 10px;
+    border: 1px solid color.$light-gray;
+    z-index: 1;
+    transition: all 0.3s ease;
+    translate: 0 -20px;
+    border-radius: 5px;
+    display: grid;
+    width: 225px;
+    height: 80px;
+    gap: 10px;
   }
 }
