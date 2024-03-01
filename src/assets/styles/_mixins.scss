@@ -1,0 +1,21 @@
+@use 'sass:math';
+
+@mixin container1280 {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+@function clamp-medium-value($min-value, $max-value) {
+  $min-width: 375px;
+  $max-width: 1440px;
+  $slope: calc(($max-value - $min-value) / ($max-width - $min-width));
+  $y-axis-intersection: calc($min-width * -1 * $slope + $min-value);
+
+  @return $y-axis-intersection + ' + ' + $slope * 100 + 'vw';
+}
+
+@function clamps($min-value, $max-value) {
+  $medium-value: clamp-medium-value($min-value, $max-value);
+
+  @return clamp(#{$min-value}, #{$medium-value}, #{$max-value});
+}

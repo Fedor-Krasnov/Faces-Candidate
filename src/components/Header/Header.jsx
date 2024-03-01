@@ -20,13 +20,15 @@ const Header = () => {
         <UserPanel isLogged={isLogged} />
       </div>
       <Menu data={subMenuData} />
-      {/* <div className="navbar-close" id="navbar-close"> */}
-      {/*   <div className="hamburger"> */}
-      {/*     <span className="line"></span> */}
-      {/*     <span className="line"></span> */}
-      {/*     <span className="line"></span> */}
-      {/*   </div> */}
-      {/* </div> */}
+      {/*
+      <div className="navbar-close" id="navbar-close">
+        <div className="hamburger">
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
+        </div>
+      </div>
+      */}
     </header>
   );
 };

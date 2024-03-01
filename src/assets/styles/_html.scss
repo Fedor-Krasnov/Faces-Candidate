@@ -1,5 +1,10 @@
+@use 'src/assets/styles/mixins';
+
 body {
+  @include mixins.container1280;
+
   font: 400 16px/1.5 "Calibri";
+  padding: 0 mixins.clamps(16px, 72px);
 }
 
 h2,
