@@ -3,12 +3,14 @@
 .user-panel {
   $selector: &;
 
+  position: relative;
+
   &__is-logged {
     &:hover {
       #{$selector}__popup {
         opacity: 1;
         visibility: visible;
-        translate: none;
+        translate: 0 10px;
       }
     }
   }
@@ -47,5 +49,6 @@
     width: 225px;
     height: 80px;
     gap: 10px;
+    right: 0;
   }
 }
