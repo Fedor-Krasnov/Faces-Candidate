@@ -10,7 +10,7 @@ export const IconCode = {
 };
 
 const iconCodeToSize = {
-  [IconCode.logoDesktop]: [175, 20],
+  [IconCode.logoDesktop]: [178, 22],
   [IconCode.logoMobile]: [35, 30],
   [IconCode.zoom]: [16, 16],
 };

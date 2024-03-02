@@ -9,15 +9,19 @@ import { UserPanel } from './UserPanel';
 const headerClassName = 'header';
 
 const Header = () => {
-  const isLogged = false;
+  const isLogged = true;
 
   return (
     <header className={headerClassName}>
       <div className={`${headerClassName}__top-level`}>
-        <Logo />
-        <Menu data={mainMenuData} />
-        <SearchBox />
-        <UserPanel isLogged={isLogged} />
+        <div className={`${headerClassName}__top-level-column`}>
+          <Logo />
+          <Menu data={mainMenuData} />
+        </div>
+        <div className={`${headerClassName}__top-level-column`}>
+          <SearchBox />
+          <UserPanel isLogged={isLogged} />
+        </div>
       </div>
       <Menu data={subMenuData} />
       {/*

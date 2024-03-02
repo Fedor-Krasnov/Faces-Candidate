@@ -4,6 +4,7 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
+    column-gap: 24px;
   }
 
   &__item {
@@ -13,7 +14,7 @@
 
   &__link {
     color: color.$really-dark-blue;
-    padding: 12px;
+    padding: 12px 0;
     position: relative;
 
     &::before {

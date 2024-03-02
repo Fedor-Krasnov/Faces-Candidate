@@ -2,8 +2,22 @@
 @use 'src/assets/styles/mixins';
 
 .header {
+  margin: 22px 0;
+  display: grid;
+  row-gap: 16px;
+
   &__top-level {
     display: flex;
+    justify-content: space-between;
     width: 100%;
+    column-gap: 20px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid color.$really-slightly-darker-than-white;
+  }
+
+  &__top-level-column {
+    display: flex;
+    column-gap: mixins.clamps(10px, 45px);
+    align-items: center;
   }
 }
