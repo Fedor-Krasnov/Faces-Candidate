@@ -1,10 +1,44 @@
 @use 'src/assets/styles/variables/color';
 
 .menu {
+  $selector: &;
+
   &__list {
     display: flex;
     flex-wrap: wrap;
     column-gap: 24px;
+  }
+
+  &__list-more-open {
+    svg {
+      rotate: 180deg;
+    }
+
+    #{$selector}__more {
+      & > div {
+        span {
+          &:nth-child(1) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__list-more-close {
+    #{$selector}__item-hidden {
+      display: none;
+    }
+
+    #{$selector}__more {
+      & > div {
+        span {
+          &:nth-child(2) {
+            display: none;
+          }
+        }
+      }
+    }
   }
 
   &__item {
@@ -32,6 +66,16 @@
 
     &:hover::before {
       transform: scaleX(1);
+    }
+  }
+
+  &__more {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    svg {
+      transition: rotate 0.5s ease;
     }
   }
 }

@@ -4,12 +4,14 @@ import iconsSvgPath from '../../../assets/media/icons/icons.svg';
 import './Icon.scss';
 
 export const IconCode = {
+  chevron: 'chevron',
   logoDesktop: 'logoDesktop',
   logoMobile: 'logoMobile',
   zoom: 'zoom',
 };
 
 const iconCodeToSize = {
+  [IconCode.chevron]: [20, 20],
   [IconCode.logoDesktop]: [178, 22],
   [IconCode.logoMobile]: [35, 30],
   [IconCode.zoom]: [16, 16],
