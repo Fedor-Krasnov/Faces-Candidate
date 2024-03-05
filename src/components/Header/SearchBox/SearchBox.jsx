@@ -1,5 +1,4 @@
 import React from 'react';
-import './SearchBox.scss';
 import { Input } from '../../units';
 import { IconCode } from '../../units/Icon';
 
