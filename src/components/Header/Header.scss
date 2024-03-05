@@ -1,4 +1,4 @@
-@use 'src/assets/styles/variables/color';
+@use '../../assets/styles/variables/colors';
 @use 'src/assets/styles/mixins';
 
 .header {
@@ -14,7 +14,7 @@
     width: 100%;
     column-gap: 20px;
     padding-bottom: 22px;
-    border-bottom: 1px solid color.$really-slightly-darker-than-white;
+    border-bottom: 1px solid colors.$really-slightly-darker-than-white;
 
     #{$selector}__top-level-column {
       display: flex;

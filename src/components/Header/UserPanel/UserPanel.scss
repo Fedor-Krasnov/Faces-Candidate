@@ -1,4 +1,4 @@
-@use 'src/assets/styles/variables/color';
+@use '../../../assets/styles/variables/colors';
 
 .user-panel {
   $selector: &;
@@ -38,9 +38,9 @@
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    background-color: color.$white;
+    background-color: colors.$white;
     padding: 10px;
-    border: 1px solid color.$light-gray;
+    border: 1px solid colors.$light-gray;
     z-index: 1;
     transition: all 0.3s ease;
     translate: 0 -20px;

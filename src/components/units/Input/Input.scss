@@ -1,4 +1,4 @@
-@use 'src/assets/styles/variables/color';
+@use '../../../assets/styles/variables/colors';
 
 .input {
   $selector: &;
@@ -12,23 +12,23 @@
   }
 
   &__field {
-    border: 2px solid color.$light-gray;
+    border: 2px solid colors.$light-gray;
     outline: none;
     font-size: 16px;
     line-height: 1;
     height: 32px;
     padding: 0 15px 0 30px;
     border-radius: 32px;
-    background-color: color.$white;
+    background-color: colors.$white;
     transition: border .2s ease;
     width: 100%;
 
     &::placeholder {
-      color: color.$light-gray;
+      color: colors.$light-gray;
     }
 
     &:focus {
-      border-color: color.$light-yellow;
+      border-color: colors.$light-yellow;
     }
   }
 
@@ -45,6 +45,6 @@
   }
 
   &__icon {
-    fill: color.$light-gray;
+    fill: colors.$light-gray;
   }
 }

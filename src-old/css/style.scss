@@ -1,4 +1,4 @@
-@use "src/assets/styles/variables/color";
+@use "../../src/assets/styles/variables/colors";
 @import "../../src/assets/styles/fonts";
 
 .text-center {
@@ -6,7 +6,7 @@
 }
 
 .bg-gray {
-  background-color: color.$slightly-darker-than-white;
+  background-color: colors.$slightly-darker-than-white;
 }
 
 .container {
@@ -46,7 +46,7 @@
 .line {
   width: 16px;
   height: 2px;
-  background-color: color.$black;
+  background-color: colors.$black;
   border-radius: 100px;
 }
 
@@ -55,7 +55,7 @@
 }
 
 .navbar--open .line {
-  background-color: color.$light-gray;
+  background-color: colors.$light-gray;
 }
 
 .navbar--open .line:nth-child(2) {
@@ -87,18 +87,18 @@
 
 .btn-outline-yellow:hover,
 .btn-yellow:hover {
-  background-color: color.$light-yellow;
-  border-color: color.$light-yellow;
+  background-color: colors.$light-yellow;
+  border-color: colors.$light-yellow;
 }
 
 .btn-outline-yellow:active,
 .btn-outline-yellow:focus-visible,
 .btn-yellow:active,
 .btn-yellow:focus-visible {
-  background-color: color.$really-light-yellow-2;
-  border-color: color.$white;
+  background-color: colors.$really-light-yellow-2;
+  border-color: colors.$white;
   outline: none;
-  box-shadow: 0 0 0 4px color.$really-light-yellow-2;
+  box-shadow: 0 0 0 4px colors.$really-light-yellow-2;
 }
 
 .btn-lg {
@@ -107,7 +107,7 @@
 }
 
 .btn-outline-yellow {
-  border-color: color.$really-light-yellow-2;
+  border-color: colors.$really-light-yellow-2;
 }
 
 .intro {
@@ -138,7 +138,7 @@
   line-height: 1;
   padding: 0 0.35em;
   border-radius: 0.2em;
-  background-color: color.$really-light-yellow-2;
+  background-color: colors.$really-light-yellow-2;
 }
 
 .subtitle {
@@ -165,9 +165,9 @@
 
 .job {
   display: flex;
-  color: color.$really-dark-blue;
-  background-color: color.$white;
-  border: 1px solid color.$really-light-gray;
+  color: colors.$really-dark-blue;
+  background-color: colors.$white;
+  border: 1px solid colors.$really-light-gray;
   border-radius: 12px;
   padding: 20px;
   gap: 24px;
@@ -185,7 +185,7 @@
   border-radius: 12px;
   align-items: center;
   justify-content: center;
-  background-color: color.$really-light-yellow-2;
+  background-color: colors.$really-light-yellow-2;
   transition: background-color .2s ease;
 }
 
@@ -199,8 +199,8 @@
   right: 10px;
   height: 30px;
   width: 30px;
-  border: 1px solid color.$really-light-yellow-2;
-  background-color: color.$white;
+  border: 1px solid colors.$really-light-yellow-2;
+  background-color: colors.$white;
   border-radius: 30px;
   display: flex;
   align-items: center;
@@ -216,12 +216,12 @@
 }
 
 .job:hover {
-  background-color: color.$really-light-yellow-2;
-  box-shadow: 0 0 0 2px color.$white;
+  background-color: colors.$really-light-yellow-2;
+  box-shadow: 0 0 0 2px colors.$white;
 }
 
 .job:hover .job_img_box {
-  background-color: color.$white;
+  background-color: colors.$white;
 }
 
 .job:hover .job_counter {
@@ -238,7 +238,7 @@
 .cta_features_box {
   width: 66.66%;
   padding: 30px;
-  background-color: color.$white;
+  background-color: colors.$white;
   border-radius: 16px;
 }
 
@@ -253,7 +253,7 @@
   content: '';
   width: 30px;
   height: 30px;
-  background-color: color.$really-light-yellow-2;
+  background-color: colors.$really-light-yellow-2;
   position: absolute;
   left: -50px;
   border-radius: 2px;
@@ -281,13 +281,13 @@
 .cta_price_box {
   width: 33.33%;
   padding: 40px 30px;
-  background-color: color.$really-light-yellow-2;
+  background-color: colors.$really-light-yellow-2;
   border-radius: 16px;
   position: relative;
 }
 
 .text-red {
-  color: color.$red;
+  color: colors.$red;
   max-width: 240px;
   font-size: 20px;
 }
@@ -302,15 +302,15 @@
   right: -10px;
   font-size: 140px;
   bottom: -60px;
-  color: color.$slightly-darker-than-white;
+  color: colors.$slightly-darker-than-white;
 }
 
 .btn-white {
-  background-color: color.$white;
+  background-color: colors.$white;
 }
 
 .btn-white:hover {
-  color: color.$yellow;
+  color: colors.$yellow;
   transition: 0.5s ease;
 }
 
@@ -321,7 +321,7 @@
 }
 
 .candidate-card {
-  background-color: color.$white;
+  background-color: colors.$white;
   border-radius: 15px;
   padding: 30px 20px;
 }
@@ -340,17 +340,17 @@
 }
 
 .time-yellow {
-  background-color: color.$really-light-yellow;
+  background-color: colors.$really-light-yellow;
   border-radius: 20px;
   padding: 1px 10px;
-  color: color.$brown;
+  color: colors.$brown;
 }
 
 .time-perple {
-  background-color: color.$light-pink;
+  background-color: colors.$light-pink;
   border-radius: 20px;
   padding: 1px 10px;
-  color: color.$purple;
+  color: colors.$purple;
 }
 
 .candidate-card {

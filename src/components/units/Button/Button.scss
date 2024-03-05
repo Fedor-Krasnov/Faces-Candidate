@@ -1,19 +1,19 @@
-@use 'src/assets/styles/variables/color';
+@use '../../../assets/styles/variables/colors';
 
 .button {
-  color: color.$really-dark-blue;
+  color: colors.$really-dark-blue;
   font-size: 16px;
   line-height: 1;
   padding: 10px 50px;
   cursor: pointer;
   transition: background .2s ease, border .2s ease;
-  background-color: color.$really-light-yellow-2;
+  background-color: colors.$really-light-yellow-2;
   border: none;
   border-radius: 26px;
 
   &_outline {
     background-color: transparent;
-    border: 2px solid color.$really-light-yellow-2;
+    border: 2px solid colors.$really-light-yellow-2;
   }
 
   &_width-fill {
