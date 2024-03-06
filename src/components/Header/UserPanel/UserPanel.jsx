@@ -2,9 +2,9 @@ import React from 'react';
 import './UserPanel.scss';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
-import { headerData } from '../../../mocks/index.js';
+import { headerData } from '../../../mocks';
 import { Button, Icon } from '../../units';
-import { IconCode } from '../../units/Icon/index.js';
+import { IconCode } from '../../units/Icon';
 
 const userPanelClassName = 'user-panel';
 const user = 'Fedor Krasnov';
