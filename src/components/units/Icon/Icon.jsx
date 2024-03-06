@@ -8,7 +8,7 @@ export const IconCode = {
   logoDesktop: 'logoDesktop',
   logoMobile: 'logoMobile',
   zoom: 'zoom',
-  export: 'export',
+  exit: 'exit',
   user: 'user',
 };
 
@@ -17,7 +17,7 @@ const iconCodeToSize = {
   [IconCode.logoDesktop]: [178, 22],
   [IconCode.logoMobile]: [35, 30],
   [IconCode.zoom]: [16, 16],
-  [IconCode.export]: [18, 18],
+  [IconCode.exit]: [24, 24],
   [IconCode.user]: [18, 18],
 };
 

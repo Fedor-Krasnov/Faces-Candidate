@@ -32,7 +32,7 @@ const UserPanel = ({ isLogged }) => {
             </Link>
             <Link className={`${userPanelClassName}__popup-content`} to={linkModalExit}>
               <span>Выйти</span>
-              <Icon code={IconCode.export} />
+              <Icon className={`${userPanelClassName}__icon-exit`} code={IconCode.exit} />
             </Link>
           </div>
         </>
