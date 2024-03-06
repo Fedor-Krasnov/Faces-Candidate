@@ -3,7 +3,8 @@ import './UserPanel.scss';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import { headerData } from '../../../mocks/index.js';
-import { Button } from '../../units';
+import { Button, Icon } from '../../units';
+import { IconCode } from '../../units/Icon/index.js';
 
 const userPanelClassName = 'user-panel';
 const user = 'Fedor Krasnov';
@@ -25,8 +26,14 @@ const UserPanel = ({ isLogged }) => {
             <span>{user}</span>
           </div>
           <div className={`${userPanelClassName}__popup`}>
-            <Link to={linkModalProfile}>Посмотреть профиль</Link>
-            <Link to={linkModalExit}>Выйти</Link>
+            <Link className={`${userPanelClassName}__popup-content`} to={linkModalProfile}>
+              <p>Посмотреть профиль</p>
+              <Icon code={IconCode.user} />
+            </Link>
+            <Link className={`${userPanelClassName}__popup-content`} to={linkModalExit}>
+              <span>Выйти</span>
+              <Icon code={IconCode.export} />
+            </Link>
           </div>
         </>
       ) : (

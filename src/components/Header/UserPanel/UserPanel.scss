@@ -50,5 +50,15 @@
     height: 80px;
     gap: 10px;
     right: 0;
+
+    #{$selector}__popup-content {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    span {
+      color: colors.$red;
+    }
   }
 }
