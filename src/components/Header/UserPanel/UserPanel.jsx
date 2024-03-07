@@ -37,7 +37,7 @@ const UserPanel = ({ isLogged }) => {
           </div>
         </>
       ) : (
-        <Button title="Войти" />
+        <Button title="Войти" to="/user-profile" />
       )}
     </div>
   );
