@@ -1,5 +1,10 @@
 import React from 'react';
+import { Agitation } from '../../sections';
 
-const HomePage = () => <div>Home page</div>;
+const HomePage = () => (
+  <>
+    <Agitation />
+  </>
+);
 
 export { HomePage };
