@@ -1,4 +1,5 @@
 export const agitationData = {
+  description: 'Мы уже со всеми провели собеседования и подтверждаем их профессионализм',
   buttonTitle: 'Выбрать кандидата',
   buttonTitleOutline: 'Попасть в базу',
   image: {
