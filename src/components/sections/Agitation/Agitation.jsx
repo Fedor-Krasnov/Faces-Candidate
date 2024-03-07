@@ -1,28 +1,35 @@
 import React from 'react';
 import './Agitation.scss';
+import { agitationData } from '../../../mocks/sections/agitationData';
+import { Button } from '../../units';
 
 const agitationClassName = 'agitation';
 
-const Agitation = () => (
-  <section className="intro container">
-    <div className="intro_img_box">
-      <img alt="иконка монитор с кандидатами" className="intro_img" src="tmp" />
-    </div>
-    <div className="intro_content_box">
-      <h1 className="title">
-        Нанимайте проверенных <span className="badge">кандидатов</span>
-      </h1>
-      <p className="subtitle text-gray">Мы уже со всеми провели собеседования и подтверждаем их профессионализм</p>
-      <div className="btn_group">
-        <a className="btn btn-lg btn-yellow" href="">
-          Выбрать кандидата
-        </a>
-        <a className="btn btn-lg btn-outline-yellow" href="">
-          Попасть в базу
-        </a>
+const Agitation = () => {
+  const { image, buttonTitle, buttonTitleOutline } = agitationData;
+
+  return (
+    <section className={agitationClassName}>
+      <div className={`${agitationClassName}__img-container`}>
+        <img alt={image.alt} className={`${agitationClassName}__image`} src={image.src} />
       </div>
-    </div>
-  </section>
-);
+      <div className={`${agitationClassName}__content`}>
+        <div className={`${agitationClassName}__title-container`}>
+          <h1 className={`${agitationClassName}__title`}>
+            <p>Нанимайте проверенных</p>
+            <span className={`${agitationClassName}__dedicated`}>кандидатов</span>
+          </h1>
+          <p className={`${agitationClassName}__description`}>
+            Мы уже со всеми провели собеседования и подтверждаем их профессионализм
+          </p>
+        </div>
+        <div className={`${agitationClassName}__button-container`}>
+          <Button title={buttonTitle} />
+          <Button outline title={buttonTitleOutline} />
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export { Agitation };

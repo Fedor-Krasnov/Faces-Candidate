@@ -9,12 +9,6 @@
   background-color: colors.$slightly-darker-than-white;
 }
 
-.container {
-  max-width: 1200px;
-  padding: 0 15px;
-  margin: auto;
-}
-
 .logo {
   grid-area: logo;
 }
@@ -108,47 +102,6 @@
 
 .btn-outline-yellow {
   border-color: colors.$really-light-yellow-2;
-}
-
-.intro {
-  display: flex;
-  padding: 100px 15px;
-  flex-direction: row-reverse;
-  align-items: center;
-}
-
-.intro_img_box {
-  width: 50%;
-}
-
-.intro_content_box {
-  width: 55%;
-}
-
-.intro_img {
-  max-width: 100%;
-}
-
-.title {
-  font-size: calc(1.625rem + 1.5vw);
-  line-height: 1.2;
-}
-
-.badge {
-  line-height: 1;
-  padding: 0 0.35em;
-  border-radius: 0.2em;
-  background-color: colors.$really-light-yellow-2;
-}
-
-.subtitle {
-  font-size: calc(13px + 0.5vw);
-  line-height: 1.28;
-  padding: 28px 0 48px;
-}
-
-.text-gray {
-  color: #626262;
 }
 
 .btn_group {

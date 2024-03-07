@@ -1,0 +1,45 @@
+@use '/src/assets/styles/variables/colors';
+@use '/src/assets/styles/mixins';
+
+.agitation {
+  display: flex;
+  padding: 100px 15px;
+  flex-direction: row-reverse;
+  align-items: center;
+
+  &__img-container {
+    width: 50%;
+  }
+
+  &__image {
+    max-width: 100%;
+  }
+
+  &__content {
+    width: 55%;
+  }
+
+  &__title {
+    font-size: mixins.clamps(25px, 48px);
+    line-height: 50px;
+  }
+
+  &__dedicated {
+    line-height: 1;
+    padding: 0 0.35em;
+    border-radius: 0.2em;
+    background-color: colors.$really-light-yellow-2;
+  }
+
+  &__description {
+    font-size: calc(13px + 0.5vw);
+    line-height: 1.28;
+    padding: 28px 0 48px;
+    color: #626262;
+  }
+
+  &__button-container {
+    display: flex;
+    gap: 20px;
+  }
+}
