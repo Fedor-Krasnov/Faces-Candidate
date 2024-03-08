@@ -1,11 +1,15 @@
+@use 'src/assets/styles/variables/colors';
 @use 'src/assets/styles/mixins';
 
 body {
-  @include mixins.container1280;
-
   font: 400 16px/1.5 "Calibri";
-  padding: 0 16px;
   box-sizing: content-box;
+  background-color: colors.$anti-flash-white;
+}
+
+main,
+header {
+  @include mixins.container1280;
 }
 
 h2,

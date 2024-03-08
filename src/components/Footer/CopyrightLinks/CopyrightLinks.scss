@@ -1,0 +1,29 @@
+@use 'src/assets/styles/variables/colors';
+
+.copyright-links {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+
+  li {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 14px;
+      width: 1px;
+      background-color: colors.$black;
+      right: -12px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    &:last-child {
+      &::after {
+        content: none;
+      }
+    }
+  }
+}
