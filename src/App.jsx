@@ -1,8 +1,6 @@
 import React, { useLayoutEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
-import { Page } from './components/Page';
-import { HomePage } from './components/Page/HomePage';
-import { UserProfilePage } from './components/Page/UserProfilePage';
+import { Page, HomePage, UserProfilePage } from './components/Page';
 
 const App = () => {
   const location = useLocation();
