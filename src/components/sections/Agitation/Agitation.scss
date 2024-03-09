@@ -2,18 +2,42 @@
 @use '/src/assets/styles/mixins';
 
 .agitation {
+  $selector: &;
+
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr mixins.clamps(300px, 520px);
-  column-gap: mixins.clamps(10px, 60px);
+  grid-template-columns: 1fr mixins.clamps(200px, 520px);
+  column-gap: mixins.clamps(1px, 60px);
+  row-gap: 20px;
 
   &__content {
     display: grid;
-    row-gap: mixins.clamps(38px, 48px);
+    row-gap: mixins.clamps(20px, 48px);
   }
 
   &__button-container {
     display: flex;
-    gap: 20px;
+    column-gap: 20px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: none;
+
+    &__image {
+      order: 1;
+      max-width: 300px;
+      margin: auto;
+    }
+
+    &__content {
+      order: 2;
+      text-align: center;
+
+      #{$selector}__button-container {
+        justify-content: center;
+      }
+    }
   }
 }
