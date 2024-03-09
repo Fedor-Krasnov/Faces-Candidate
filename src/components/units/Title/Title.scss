@@ -1,0 +1,22 @@
+@use 'src/assets/styles/variables/typography';
+@use 'src/assets/styles/variables/colors';
+@use 'src/assets/styles/mixins';
+
+.title {
+  display: grid;
+  row-gap: mixins.clamps(20px, 28px);
+
+  h1 + p {
+    @include mixins.font(typography.$font-28px-to-20px);
+
+    color: colors.$gray;
+  }
+
+  p {
+    @include mixins.font(typography.$font-24px-to-20px);
+  }
+
+  &_text-center {
+    text-align: center;
+  }
+}
