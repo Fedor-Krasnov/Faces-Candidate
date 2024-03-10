@@ -1,19 +1,19 @@
 @use '/src/assets/styles/variables/colors';
 
 .button {
-  color: colors.$really-dark-blue;
+  color: colors.$eerie-black;
   font-size: 16px;
   line-height: 1;
   padding: 10px 50px;
   cursor: pointer;
   transition: background .2s ease, border .2s ease;
-  background-color: colors.$really-light-yellow-2;
+  background-color: colors.$golden-sand;
   border: none;
   border-radius: 26px;
 
   &_outline {
     background-color: transparent;
-    border: 2px solid colors.$really-light-yellow-2;
+    border: 2px solid colors.$golden-sand;
   }
 
   &_width-fill {
