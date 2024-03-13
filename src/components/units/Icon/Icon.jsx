@@ -10,6 +10,7 @@ export const IconCode = {
   zoom: 'zoom',
   exit: 'exit',
   user: 'user',
+  target: 'target',
 };
 
 const iconCodeToSize = {
@@ -19,6 +20,7 @@ const iconCodeToSize = {
   [IconCode.zoom]: [16, 16],
   [IconCode.exit]: [24, 24],
   [IconCode.user]: [18, 18],
+  [IconCode.target]: [60, 60],
 };
 
 const iconClassName = 'icon';
