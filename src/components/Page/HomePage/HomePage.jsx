@@ -1,9 +1,10 @@
 import React from 'react';
-import { Agitation } from '../../sections';
+import { Agitation, DirectionOfWork } from '../../sections';
 
 const HomePage = () => (
   <>
     <Agitation />
+    <DirectionOfWork />
   </>
 );
 

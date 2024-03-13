@@ -28,10 +28,6 @@
     width: auto;
   }
 
-  .jobs_grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .header {
     grid-template-columns: min-content auto min-content;
     grid-template-areas:
