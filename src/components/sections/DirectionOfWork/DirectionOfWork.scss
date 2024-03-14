@@ -1,7 +1,10 @@
 @use 'src/assets/styles/variables/colors';
+@use 'src/assets/styles/mixins';
 
 .direction-of-work {
   $selector: &;
+
+  @include mixins.section;
 
   h2 {
     display: flex;

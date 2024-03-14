@@ -7,6 +7,10 @@
   padding: 0 16px;
 }
 
+@mixin section {
+  padding-top: clamps(80px, 120px);
+}
+
 @mixin font($font-typography, $font-weight: 400) {
   $max: list.nth($font-typography, 1);
   $min: list.nth($font-typography, 2);

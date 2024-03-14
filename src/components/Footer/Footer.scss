@@ -4,6 +4,7 @@
 .footer {
   background-color: colors.$white;
   padding: 44px 0;
+  margin-top: mixins.clamps(80px, 100px);
 
   &__container {
     @include mixins.container1280;
