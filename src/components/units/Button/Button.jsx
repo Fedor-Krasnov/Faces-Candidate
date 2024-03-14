@@ -4,11 +4,12 @@ import './Button.scss';
 import classNames from 'classnames';
 import { Icon } from '../Icon';
 
-const Button = ({ className, icon, outline, title, to, width }) => {
+const Button = ({ className, icon, outline, title, to, width, secondary }) => {
   const buttonClassNames = classNames(
     'button',
     { ['button_icon']: icon },
     { ['button_outline']: outline },
+    { ['button_secondary']: secondary },
     { [`button_width-${width}`]: width },
     className,
   );

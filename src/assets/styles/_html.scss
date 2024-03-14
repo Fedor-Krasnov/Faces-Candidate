@@ -8,6 +8,11 @@ body {
   background-color: colors.$anti-flash-white;
 }
 
+main {
+  display: grid;
+  row-gap: mixins.clamps(80px, 100px);
+}
+
 main,
 header {
   @include mixins.container1280;

@@ -4,8 +4,6 @@
 .agitation {
   $selector: &;
 
-  @include mixins.section;
-
   display: grid;
   align-items: center;
   grid-template-columns: 1fr mixins.clamps(200px, 520px);

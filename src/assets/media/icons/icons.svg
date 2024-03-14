@@ -77,4 +77,9 @@
       </clipPath>
     </defs>
   </symbol>
+
+  <symbol id="checkMark" viewBox="0 0 40 40" fill="none">
+    <rect x="6.66602" y="8.33398" width="30" height="30" rx="2" fill="#F1DF6F"/>
+    <path d="M3.33398 20.834C7.22287 21.1118 18.0007 23.5007 23.334 30.834C23.6118 24.4451 26.1673 10.0007 34.1673 3.33398" stroke="#111827" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
 </svg>

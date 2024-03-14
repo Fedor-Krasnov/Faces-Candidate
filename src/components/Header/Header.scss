@@ -7,6 +7,7 @@
   margin: 22px auto;
   display: grid;
   row-gap: 16px;
+  padding-bottom: mixins.clamps(60px, 80px);
 
   &__top-level {
     display: flex;

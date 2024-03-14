@@ -16,6 +16,10 @@
     border: 2px solid colors.$golden-sand;
   }
 
+  &_secondary {
+    background-color: colors.$white;
+  }
+
   &_width-fill {
     width: 100%;
   }

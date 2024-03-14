@@ -18,6 +18,7 @@ export const IconCode = {
   analytics: 'analytics',
   message: 'message',
   star: 'star',
+  checkMark: 'checkMark',
 };
 
 const iconCodeToSize = {
@@ -35,6 +36,7 @@ const iconCodeToSize = {
   [IconCode.analytics]: [60, 60],
   [IconCode.message]: [60, 60],
   [IconCode.star]: [60, 60],
+  [IconCode.checkMark]: [40, 40],
 };
 
 const iconClassName = 'icon';
