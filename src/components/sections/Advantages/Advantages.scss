@@ -1,0 +1,77 @@
+@use '/src/assets/styles/variables/colors';
+
+.cta_box {
+  gap: 24px;
+  display: flex;
+  margin-top: 100px;
+}
+
+.cta_features_box {
+  width: 66.66%;
+  padding: 30px;
+  background-color: colors.$white;
+  border-radius: 16px;
+}
+
+.features_title {
+  font-size: 28px;
+  position: relative;
+  line-height: 1.2;
+  margin: 15px 0 15px 50px;
+}
+
+.features_title::before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  background-color: colors.$golden-sand;
+  position: absolute;
+  left: -50px;
+  border-radius: 2px;
+  top: 0;
+}
+
+.features_title::after {
+  content: '';
+  height: 27px;
+  width: 30px;
+  background: url('/src/assets/media/icons/check.png') no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: -53px;
+  top: -5px;
+}
+
+.features_description {
+  max-width: 500px;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 30px;
+}
+
+.cta_price_box {
+  width: 33.33%;
+  padding: 40px 30px;
+  background-color: colors.$golden-sand;
+  border-radius: 16px;
+  position: relative;
+}
+
+.cta_price_box::after {
+  content: attr(data-price);
+  position: absolute;
+  right: -10px;
+  font-size: 140px;
+  bottom: -60px;
+  color: colors.$chinese-white;
+}
+
+.text-red {
+  color: colors.$red;
+  max-width: 240px;
+  font-size: 20px;
+}
+
+.btn-white__container{
+  margin-top: 50px;
+}
