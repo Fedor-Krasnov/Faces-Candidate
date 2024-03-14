@@ -11,6 +11,13 @@ export const IconCode = {
   exit: 'exit',
   user: 'user',
   target: 'target',
+  terminal: 'terminal',
+  schedule: 'schedule',
+  community: 'community',
+  scenery: 'scenery',
+  analytics: 'analytics',
+  message: 'message',
+  star: 'star',
 };
 
 const iconCodeToSize = {
@@ -21,6 +28,13 @@ const iconCodeToSize = {
   [IconCode.exit]: [24, 24],
   [IconCode.user]: [18, 18],
   [IconCode.target]: [60, 60],
+  [IconCode.terminal]: [60, 60],
+  [IconCode.schedule]: [60, 60],
+  [IconCode.community]: [60, 60],
+  [IconCode.scenery]: [60, 60],
+  [IconCode.analytics]: [60, 60],
+  [IconCode.message]: [60, 60],
+  [IconCode.star]: [60, 60],
 };
 
 const iconClassName = 'icon';

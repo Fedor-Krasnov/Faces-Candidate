@@ -3,6 +3,11 @@
 .direction-of-work {
   $selector: &;
 
+  h2 {
+    display: flex;
+    justify-content: center;
+  }
+
   &__container {
     display: grid;
     margin-top: 25px;
