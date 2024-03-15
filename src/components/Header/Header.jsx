@@ -1,7 +1,7 @@
 import React from 'react';
-import './Header.scss';
 import { mainMenuData, subMenuData } from '../../mocks';
 import { Logo } from '../units';
+import headerStyles from './Header.module.scss';
 import { Menu } from './Menu';
 import { SearchBox } from './SearchBox';
 import { UserPanel } from './UserPanel';
@@ -12,13 +12,13 @@ const Header = () => {
   const isLogged = false;
 
   return (
-    <header className={headerClassName}>
-      <div className={`${headerClassName}__top-level`}>
-        <div className={`${headerClassName}__top-level-column`}>
+    <header className={headerStyles[headerClassName]}>
+      <div className={headerStyles[`${headerClassName}__top-level`]}>
+        <div className={headerStyles[`${headerClassName}__top-level-column`]}>
           <Logo />
           <Menu data={mainMenuData} />
         </div>
-        <div className={`${headerClassName}__top-level-column`}>
+        <div className={headerStyles[`${headerClassName}__top-level-column`]}>
           <SearchBox />
           <UserPanel isLogged={isLogged} />
         </div>
