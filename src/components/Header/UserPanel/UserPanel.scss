@@ -40,6 +40,13 @@
         align-items: inherit;
         justify-content: inherit;
       }
+
+      &:last-child {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 120px;
+      }
     }
   }
 

@@ -9,7 +9,7 @@ import { UserPanel } from './UserPanel';
 const headerClassName = 'header';
 
 const Header = () => {
-  const isLogged = false;
+  const isLogged = true;
 
   return (
     <header className={headerStyles[headerClassName]}>
