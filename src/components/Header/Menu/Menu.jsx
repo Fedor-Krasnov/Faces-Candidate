@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
-import './Menu.scss';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import { Icon } from '../../units';
 import { IconCode } from '../../units/Icon';
+import menuStyles from './Menu.module.scss';
 
 const menuClassName = 'menu';
 
@@ -15,18 +15,18 @@ const Menu = ({ data }) => {
   const isMoreElements = dataLength > maxViewItems;
 
   const getItem = ({ title, link }, indexItem, className) => (
-    <li key={indexItem} className={classNames(`${menuClassName}__item`, className)}>
-      <Link className={`${menuClassName}__link`} dangerouslySetInnerHTML={{ __html: title }} to={link} />
+    <li key={indexItem} className={classNames(menuStyles[`${menuClassName}__item`], className)}>
+      <Link className={menuStyles[`${menuClassName}__link`]} dangerouslySetInnerHTML={{ __html: title }} to={link} />
     </li>
   );
 
   const handleClick = () => {
     if (isOpenRef.current) {
-      ulRef.current.classList.add(`${menuClassName}__list-more-open`);
-      ulRef.current.classList.remove(`${menuClassName}__list-more-close`);
+      ulRef.current.classList.add(menuStyles[`${menuClassName}__list-more-open`]);
+      ulRef.current.classList.remove(menuStyles[`${menuClassName}__list-more-close`]);
     } else {
-      ulRef.current.classList.add(`${menuClassName}__list-more-close`);
-      ulRef.current.classList.remove(`${menuClassName}__list-more-open`);
+      ulRef.current.classList.add(menuStyles[`${menuClassName}__list-more-close`]);
+      ulRef.current.classList.remove(menuStyles[`${menuClassName}__list-more-open`]);
     }
     isOpenRef.current = !isOpenRef.current;
   };
@@ -36,12 +36,12 @@ const Menu = ({ data }) => {
   }, []);
 
   return (
-    <nav className={menuClassName}>
-      <ul ref={ulRef} className={`${menuClassName}__list`}>
+    <nav className={menuStyles[menuClassName]}>
+      <ul ref={ulRef} className={menuStyles[`${menuClassName}__list`]}>
         {data.slice(0, 4).map((item, indexItem) => getItem(item, indexItem, null))}
-        {data.slice(4).map((item, indexItem) => getItem(item, indexItem, `${menuClassName}__item-hidden`))}
+        {data.slice(4).map((item, indexItem) => getItem(item, indexItem, menuStyles[`${menuClassName}__item-hidden`]))}
         {isMoreElements && (
-          <li className={`${menuClassName}__more`} onClick={handleClick}>
+          <li className={menuStyles[`${menuClassName}__more`]} onClick={handleClick}>
             <div>
               <span>Ещё</span>
               <span>Скрыть</span>
