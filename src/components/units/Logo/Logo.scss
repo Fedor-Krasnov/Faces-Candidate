@@ -1,4 +1,6 @@
 .logo {
+  margin: auto;
+
   &__desktop,
   &__mobile {
     height: 27px;
@@ -9,7 +11,7 @@
     display: none;
   }
 
-  @media screen and (max-width: 1120px) {
+  @media screen and (max-width: 1200px) {
     &__desktop {
       display: none;
     }

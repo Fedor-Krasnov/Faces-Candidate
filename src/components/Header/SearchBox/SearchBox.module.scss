@@ -1,7 +1,11 @@
 .search-box {
-  /* ... */
+  width: 100%;
 
   &__input {
     min-width: 320px;
+
+    @media screen and (max-width: 1024px) {
+      min-width: auto;
+    }
   }
 }

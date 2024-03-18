@@ -1,1 +1,2 @@
-export * from './pageCheck';
+export { pageCheck } from './pageCheck';
+export * from './breakpoints';

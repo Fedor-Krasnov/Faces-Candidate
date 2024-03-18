@@ -1,4 +1,5 @@
 import React from 'react';
+import { useMobileVersion } from '../../hooks';
 import { mainMenuData, subMenuData } from '../../mocks';
 import { Logo } from '../units';
 import headerStyles from './Header.module.scss';
@@ -10,20 +11,31 @@ const headerClassName = 'header';
 
 const Header = () => {
   const isLogged = true;
+  const { isBreakpointLg } = useMobileVersion();
 
   return (
     <header className={headerStyles[headerClassName]}>
       <div className={headerStyles[`${headerClassName}__top-level`]}>
-        <div className={headerStyles[`${headerClassName}__top-level-column`]}>
-          <Logo />
-          <Menu data={mainMenuData} />
-        </div>
-        <div className={headerStyles[`${headerClassName}__top-level-column`]}>
-          <SearchBox />
-          <UserPanel isLogged={isLogged} />
-        </div>
+        {isBreakpointLg ? (
+          <>
+            <Logo />
+            <SearchBox />
+            <div>+++</div>
+          </>
+        ) : (
+          <>
+            <div className={headerStyles[`${headerClassName}__top-level-column`]}>
+              <Logo className={headerStyles[`${headerClassName}__logo`]} />
+              <Menu data={mainMenuData} />
+            </div>
+            <div className={headerStyles[`${headerClassName}__top-level-column`]}>
+              <SearchBox />
+              <UserPanel isLogged={isLogged} />
+            </div>
+          </>
+        )}
       </div>
-      <Menu data={subMenuData} />
+      {!isBreakpointLg ? <Menu data={subMenuData} /> : null}
       {/*
       <div className="navbar-close" id="navbar-close">
         <div className="hamburger">

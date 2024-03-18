@@ -1,12 +1,13 @@
 import React from 'react';
 import './Logo.scss';
+import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import { pageCheck } from '../../../helpers';
 import { Icon, IconCode } from '../Icon';
 
 const logoClassName = 'logo';
 
-const Logo = () => {
+const Logo = ({ className }) => {
   const { isMainPage } = pageCheck();
   const logoElement = (
     <>
@@ -15,7 +16,11 @@ const Logo = () => {
     </>
   );
 
-  return <div className={logoClassName}>{isMainPage ? logoElement : <Link to="/">{logoElement}</Link>}</div>;
+  return (
+    <div className={classNames(logoClassName, className)}>
+      {isMainPage ? logoElement : <Link to="/">{logoElement}</Link>}
+    </div>
+  );
 };
 
 export { Logo };

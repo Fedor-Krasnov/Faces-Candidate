@@ -9,6 +9,14 @@
   row-gap: 16px;
   padding-bottom: mixins.clamps(60px, 80px);
 
+  &__logo {
+    translate: 0 -5px;
+
+    @media screen and (max-width: 1200px) {
+      translate: none;
+    }
+  }
+
   &__top-level {
     display: flex;
     justify-content: space-between;
@@ -17,9 +25,14 @@
     padding-bottom: 22px;
     border-bottom: 1px solid colors.$platinum;
 
+    @media screen and (max-width: 1200px) {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
     #{$selector}__top-level-column {
       display: flex;
-      column-gap: mixins.clamps(10px, 45px);
+      column-gap: mixins.clamps(5px, 20px);
       align-items: center;
     }
   }
