@@ -2,6 +2,7 @@ import React from 'react';
 import { useMobileVersion } from '../../hooks';
 import { mainMenuData, subMenuData } from '../../mocks';
 import { Logo } from '../units';
+import { Burger } from './Burger/index.js';
 import headerStyles from './Header.module.scss';
 import { Menu } from './Menu';
 import { SearchBox } from './SearchBox';
@@ -20,7 +21,7 @@ const Header = () => {
           <>
             <Logo />
             <SearchBox />
-            <div>+++</div>
+            <Burger />
           </>
         ) : (
           <>
@@ -36,15 +37,6 @@ const Header = () => {
         )}
       </div>
       {!isBreakpointLg ? <Menu data={subMenuData} /> : null}
-      {/*
-      <div className="navbar-close" id="navbar-close">
-        <div className="hamburger">
-          <span className="line"></span>
-          <span className="line"></span>
-          <span className="line"></span>
-        </div>
-      </div>
-      */}
     </header>
   );
 };

@@ -10,7 +10,7 @@
   padding-bottom: mixins.clamps(60px, 80px);
 
   &__logo {
-    translate: 0 -5px;
+    translate: 0 -3px;
 
     @media screen and (max-width: 1200px) {
       translate: none;
@@ -28,6 +28,9 @@
     @media screen and (max-width: 1200px) {
       padding-bottom: 0;
       border-bottom: none;
+      display: grid;
+      align-items: center;
+      grid-template-columns: 35px 1fr 20px;
     }
 
     #{$selector}__top-level-column {
