@@ -1,0 +1,61 @@
+@use '/src/assets/styles/variables/colors';
+
+.user-card {
+  $selector: &;
+
+  background-color: colors.$white;
+  border-radius: 10px;
+  padding: 20px 20px;
+
+  img {
+    margin: 0 auto;
+  }
+
+  &__portfolio {
+    display: grid;
+    justify-content: center;
+    row-gap: 5px;
+    margin: 20px 0;
+  }
+
+  &__tags {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    margin-bottom: 20px;
+
+    #{$selector}__tag-orange {
+      background-color: colors.$lemon-chiffon;
+      color: colors.$saddle-brown;
+      border-radius: 10px;
+      padding: 2px 5px;
+    }
+
+    #{$selector}__tag-purple {
+      background-color: colors.$lavender;
+      color: colors.$grape;
+      border-radius: 10px;
+      padding: 2px 5px;
+    }
+  }
+
+  &__title {
+    display: grid;
+    justify-content: center;
+    row-gap: 0;
+    margin-top: 20px;
+
+    h4 {
+      font-size: 20px;
+      display: grid;
+      justify-content: center;
+    }
+
+    p {
+      font-size: 16px;
+      color: colors.$spanish-gray;
+      display: grid;
+      justify-content: center;
+    }
+  }
+}

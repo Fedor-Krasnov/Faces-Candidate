@@ -1,0 +1,15 @@
+.candidates {
+  /* */
+
+  &__title {
+    display: grid;
+    justify-content: center;
+  }
+
+  &__container {
+    display: grid;
+    gap: 30px;
+    margin-top: 25px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
