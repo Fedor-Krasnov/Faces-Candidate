@@ -33,7 +33,9 @@ const UserCard = () => {
             <p dangerouslySetInnerHTML={{ __html: portfolio.experience }} />
             <p dangerouslySetInnerHTML={{ __html: portfolio.salary }} />
           </div>
-          <Button title={buttonTitle} />
+          <div className={userCardStyles[`${userCardClassName}__button`]}>
+            <Button title={buttonTitle} />
+          </div>
         </div>
       ))}
     </>

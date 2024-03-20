@@ -39,6 +39,11 @@
     }
   }
 
+  &__button {
+    display: grid;
+    justify-content: center;
+  }
+
   &__title {
     display: grid;
     justify-content: center;
