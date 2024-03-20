@@ -4,7 +4,7 @@
   &__input {
     min-width: 320px;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 768px) {
       min-width: auto;
     }
   }

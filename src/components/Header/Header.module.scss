@@ -28,9 +28,8 @@
     @media screen and (max-width: 1200px) {
       padding-bottom: 0;
       border-bottom: none;
-      display: grid;
+      display: flex;
       align-items: center;
-      grid-template-columns: 35px 1fr 20px;
     }
 
     #{$selector}__top-level-column {
