@@ -1,24 +1,28 @@
 import React from 'react';
-import './Input.scss';
 import classNames from 'classnames';
 import { Icon } from '../Icon';
+import inputStyles from './Input.module.scss';
 
 const inputClassName = 'input';
 
 const Input = ({ buttonIcon, className, icon, placeholder, type = 'text' }) => {
-  const iconElement = <Icon className={`${inputClassName}__icon`} code={icon || buttonIcon} />;
+  const iconElement = <Icon className={inputStyles[`${inputClassName}__icon`]} code={icon || buttonIcon} />;
 
   return (
     <div
-      className={classNames(inputClassName, { [`${inputClassName}_without-icon`]: !icon && !buttonIcon }, className)}
+      className={classNames(
+        inputClassName,
+        { [inputStyles[`${inputClassName}_without-icon`]]: !icon && !buttonIcon },
+        className,
+      )}
     >
-      {icon && <div className={`${inputClassName}__icon-container`}>{iconElement}</div>}
+      {icon && <div className={inputStyles[`${inputClassName}__icon-container`]}>{iconElement}</div>}
       {buttonIcon && (
-        <button className={`${inputClassName}__icon-container`} type="submit">
+        <button className={inputStyles[`${inputClassName}__icon-container`]} type="submit">
           {iconElement}
         </button>
       )}
-      <input className={`${inputClassName}__field`} placeholder={placeholder} type={type} />
+      <input className={inputStyles[`${inputClassName}__field`]} placeholder={placeholder} type={type} />
     </div>
   );
 };
