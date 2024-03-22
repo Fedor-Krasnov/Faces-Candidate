@@ -39,12 +39,18 @@
     background-color: transparent;
     position: absolute;
     top: 3%;
-    transform: translateY(-50%);
+    transform: translateY(65%);
     padding-left: 10px;
     display: flex;
   }
 
   &__icon {
     fill: colors.$light-gray;
+  }
+
+  @media screen and (max-width: 1024px) {
+    &__icon-container {
+      transform: translateY(35%);
+    }
   }
 }
