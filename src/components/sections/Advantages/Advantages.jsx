@@ -1,6 +1,6 @@
 import React from 'react';
 import './Advantages.scss';
-import { advantagesData } from '../../../mocks/sections/advantagesData';
+import { advantagesData } from '../../../mocks/sections';
 import { Button, Icon, Title } from '../../units';
 
 const advantagesClassName = 'advantages';
@@ -28,14 +28,12 @@ const Advantages = () => {
         </div>
       </div>
       <div className={`${advantagesClassName}__right-block`} data-price={dataPrice}>
-        {/* от сюда */}
         <Title
           className={`${advantagesClassName}__title`}
           description={descriptionRightBlock}
           title={titleRightBlock}
           titleLevel="h2"
         />
-        {/* до сюда, сделать description красного цвета */}
         <Button className={`${advantagesClassName}__button`} secondary title={buttonTitle} />
       </div>
     </section>
