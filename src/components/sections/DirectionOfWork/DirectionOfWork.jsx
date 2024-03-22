@@ -1,7 +1,7 @@
 import React from 'react';
 import './DirectionOfWork.scss';
 import { Link } from 'react-router-dom';
-import { directionOfWorkData } from '../../../mocks/sections/directionOfWorkData';
+import { directionOfWorkData } from '../../../mocks/sections';
 import { Icon, Title } from '../../units';
 
 const directionOfWorkClassName = 'direction-of-work';

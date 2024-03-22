@@ -1,6 +1,6 @@
 import React from 'react';
 import './Agitation.scss';
-import { agitationData } from '../../../mocks/sections/agitationData';
+import { agitationData } from '../../../mocks/sections';
 import { Button, Title } from '../../units';
 
 const agitationClassName = 'agitation';
