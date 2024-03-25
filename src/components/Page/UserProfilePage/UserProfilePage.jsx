@@ -1,5 +1,5 @@
 import React from 'react';
-import './UserProfilePage.scss';
+import userProfilePageStyles from './UserProfilePage.module.scss';
 
 const UserProfilePage = () => <div></div>;
 
