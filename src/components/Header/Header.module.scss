@@ -24,6 +24,8 @@
     column-gap: 20px;
     padding-bottom: 22px;
     border-bottom: 1px solid colors.$platinum;
+    position: relative;
+    z-index: 1;
 
     @media screen and (max-width: 1200px) {
       padding-bottom: 0;

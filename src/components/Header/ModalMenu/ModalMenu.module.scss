@@ -1,0 +1,42 @@
+@use 'src/assets/styles/variables/colors';
+
+.modal-menu {
+  $selector: &;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: background-color 1s ease;
+
+  &_enter {
+    background-color: rgba(0, 0, 0, 0.2);
+
+    #{$selector}__content {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  &_exit {
+    #{$selector}__content {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+    background-color: colors.$white;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 70px 18px 25px;
+    transition: transform 1s cubic-bezier(0.76, 0, 0.24, 1), opacity 1s ease;
+    transform: translateY(-100%);
+    box-shadow: 0 0 10px colors.$yellow;
+    opacity: 0;
+  }
+}

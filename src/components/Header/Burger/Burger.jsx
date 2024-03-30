@@ -1,23 +1,22 @@
-import React, { useState } from 'react';
-import { Modal } from '../../Modal';
-import { ModalMenu } from '../ModalMenu';
+import React from 'react';
+import { useModalMenuContext } from '../../../contexts';
 import burgerStyles from './Burger.module.scss';
 
 const burgerClassName = 'burger';
 
 const Burger = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { isModalMenuOpen, setIsModalMenuOpen } = useModalMenuContext();
 
   return (
     <div className={burgerStyles[burgerClassName]}>
-      <div className={burgerStyles[`${burgerClassName}__container`]} onClick={() => setIsModalOpen(true)}>
+      <div
+        className={burgerStyles[`${burgerClassName}__container`]}
+        onClick={() => setIsModalMenuOpen(!isModalMenuOpen)}
+      >
         <span />
         <span />
         <span />
       </div>
-      <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}>
-        <ModalMenu />
-      </Modal>
     </div>
   );
 };
