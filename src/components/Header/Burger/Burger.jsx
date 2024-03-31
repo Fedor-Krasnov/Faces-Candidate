@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import { useModalMenuContext } from '../../../contexts';
 import burgerStyles from './Burger.module.scss';
 
@@ -10,7 +11,9 @@ const Burger = () => {
   return (
     <div className={burgerStyles[burgerClassName]}>
       <div
-        className={burgerStyles[`${burgerClassName}__container`]}
+        className={classNames(burgerStyles[`${burgerClassName}__container`], {
+          [burgerStyles[`${burgerClassName}__container-icon-close`]]: isModalMenuOpen,
+        })}
         onClick={() => setIsModalMenuOpen(!isModalMenuOpen)}
       >
         <span />

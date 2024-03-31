@@ -1,6 +1,8 @@
 @use '/src/assets/styles/variables/colors';
 
 .burger {
+  $selector: &;
+
   &__container {
     display: grid;
     align-content: space-between;
@@ -11,11 +13,15 @@
     &:hover {
       span {
         background-color: colors.$golden-sand;
+      }
 
-        &:nth-child(1),
-        &:nth-child(2),
-        &:nth-child(3) {
-          width: 100%;
+      &:not(#{$selector}__container-icon-close) {
+        span {
+          &:nth-child(1),
+          &:nth-child(2),
+          &:nth-child(3) {
+            width: 100%;
+          }
         }
       }
     }
@@ -38,6 +44,31 @@
       &:nth-child(3) {
         width: 90%;
         transition-delay: 0.2s;
+      }
+    }
+  }
+
+  &__container-icon-close {
+    span {
+      &:nth-child(1) {
+        rotate: 45deg;
+        transform-origin: left top;
+        width: 100%;
+        transition-delay: 0s;
+      }
+
+      &:nth-child(2) {
+        width: 0;
+        transition-delay: 0s;
+        transform-origin: center;
+        margin: auto;
+      }
+
+      &:nth-child(3) {
+        rotate: -45deg;
+        transform-origin: left bottom;
+        width: 100%;
+        transition-delay: 0s;
       }
     }
   }
