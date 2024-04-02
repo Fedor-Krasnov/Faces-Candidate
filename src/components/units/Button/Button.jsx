@@ -6,7 +6,7 @@ import { Icon } from '../Icon';
 
 const buttonClassName = 'button';
 
-const Button = ({ className, icon, outline, title, to, width, secondary }) => {
+const Button = ({ className, icon, onClick, outline, title, to, width, secondary }) => {
   const buttonClassNames = classNames(
     buttonStyles[buttonClassName],
     { [buttonStyles[`${buttonClassName}_icon`]]: icon },
@@ -28,7 +28,9 @@ const Button = ({ className, icon, outline, title, to, width, secondary }) => {
       {buttonTitle}
     </Link>
   ) : (
-    <button className={buttonClassNames}>{buttonTitle}</button>
+    <button onClick={onClick} className={buttonClassNames}>
+      {buttonTitle}
+    </button>
   );
 };
 
