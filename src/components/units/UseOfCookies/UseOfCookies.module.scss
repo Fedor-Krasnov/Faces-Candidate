@@ -11,4 +11,17 @@
   max-width: 320px;
   text-align: center;
   border: 1px solid white;
+
+  &_exit {
+    opacity: 0;
+    translate: 0 100%;
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.2s;
+
+    button {
+      opacity: 0;
+      translate: 0 100%;
+      transition: all 0.5s ease-in-out;
+    }
+  }
 }
