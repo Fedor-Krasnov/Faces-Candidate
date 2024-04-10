@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ModalMenuContext } from '../../contexts/modalMenuContext.js';
+import { ModalMenuContext } from '../../contexts';
 import { useMobileVersion } from '../../hooks';
 import { mainMenuData, subMenuData } from '../../mocks';
 import { Logo } from '../units';
