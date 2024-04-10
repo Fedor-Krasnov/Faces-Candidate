@@ -1,5 +1,5 @@
 import React from 'react';
-import { Advantages, Agitation, DirectionOfWork, Candidates } from '../../sections';
+import { Advantages, Agitation, DirectionOfWork, Candidates, SubscribeToTheDatabase } from '../../sections';
 
 const HomePage = () => (
   <>
@@ -7,6 +7,7 @@ const HomePage = () => (
     <DirectionOfWork />
     <Advantages />
     <Candidates />
+    <SubscribeToTheDatabase />
   </>
 );
 
