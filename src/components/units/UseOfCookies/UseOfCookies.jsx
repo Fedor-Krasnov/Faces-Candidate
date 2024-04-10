@@ -17,7 +17,9 @@ const UseOfCookies = () => {
       unmountOnExit
     >
       <div className={useOfCookiesStyles[useOfCookiesClassName]}>
-        <div>Продолжая пользоваться данным сайтом, вы соглашаетесь с тем, что мы используем файлы cookie</div>
+        <div>
+          Продолжая пользоваться данным сайтом, вы&nbsp;соглашаетесь с&nbsp;тем, что мы&nbsp;используем файлы cookie
+        </div>
         <Button onClick={() => closePopupCookie()} secondary title="Хорошо" />
       </div>
     </CSSTransition>
