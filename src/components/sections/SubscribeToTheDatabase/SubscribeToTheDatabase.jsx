@@ -6,7 +6,7 @@ import subscribeToTheDatabaseStyles from './SubscribeToTheDatabase.module.scss';
 const subscribeToTheDatabaseClassName = 'subscribe-to-the-database';
 
 const SubscribeToTheDatabase = () => {
-  const { title, description, image, questionnaire, buttonTitle } = subscribeToTheDatabaseData;
+  const { title, description, image, questionnaire, buttonTitle, href } = subscribeToTheDatabaseData;
 
   return (
     <section className={subscribeToTheDatabaseStyles[subscribeToTheDatabaseClassName]}>
@@ -32,8 +32,8 @@ const SubscribeToTheDatabase = () => {
         </div>
         <div className={subscribeToTheDatabaseStyles[`${subscribeToTheDatabaseClassName}__warning`]}>
           <p>
-            Отправка данной формы означает согласие с <a href="#">Пользовательским соглашением</a> и{' '}
-            <a href="#">Политикой конфиденциальности</a>
+            Отправка данной формы означает согласие с <a href={href.src1}>Пользовательским соглашением</a> и{' '}
+            <a href={href.src2}>Политикой конфиденциальности</a>
           </p>
         </div>
       </div>

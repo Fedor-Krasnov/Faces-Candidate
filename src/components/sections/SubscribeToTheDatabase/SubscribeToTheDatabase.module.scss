@@ -52,6 +52,11 @@
     row-gap: 12px;
     justify-content: space-between;
     border-top: 2px solid colors.$platinum;
+    color: colors.$auro-metal-saurus;
+
+    a {
+      color: colors.$black;
+    }
 
     p {
       font-size: 12px;
