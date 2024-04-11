@@ -1,6 +1,8 @@
+@use '/src/assets/styles/variables/typography';
 @use '/src/assets/styles/variables/colors';
+@use '/src/assets/styles/mixins';
 
-.subscribe-to-the-database{
+.subscribe-to-the-database {
   $selector: &;
 
   display: flex;
@@ -19,6 +21,10 @@
 
     input {
       height: 45px;
+
+      &::placeholder {
+        font-size: 14px;
+      }
     }
 
     button {
@@ -31,7 +37,7 @@
       row-gap: 5px;
 
       p {
-        font-size: 24px;
+        @include mixins.font(typography.$font-24px-to-16px);
       }
     }
 
@@ -60,6 +66,27 @@
 
     p {
       font-size: 12px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: none;
+
+    &__left-block-img {
+      width: 100%;
+
+      img {
+        margin: auto;
+      }
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    &__warning {
+      p {
+        text-align: center;
+      }
     }
   }
 }
