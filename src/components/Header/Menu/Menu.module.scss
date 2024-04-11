@@ -3,6 +3,13 @@
 .menu {
   $selector: &;
 
+  &_is-modal {
+    #{$selector}__list {
+      display: grid;
+      row-gap: 24px;
+    }
+  }
+
   &__list {
     display: flex;
     flex-wrap: wrap;

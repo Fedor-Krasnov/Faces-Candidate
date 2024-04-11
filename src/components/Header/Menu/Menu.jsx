@@ -7,7 +7,7 @@ import menuStyles from './Menu.module.scss';
 
 const menuClassName = 'menu';
 
-const Menu = ({ data }) => {
+const Menu = ({ data, isModal }) => {
   const ulRef = useRef(null);
   const isOpenRef = useRef(false);
   const maxViewItems = 4;
@@ -36,7 +36,7 @@ const Menu = ({ data }) => {
   }, []);
 
   return (
-    <nav className={menuStyles[menuClassName]}>
+    <nav className={classNames(menuStyles[menuClassName], { [menuStyles[`${menuClassName}_is-modal`]]: isModal })}>
       <ul ref={ulRef} className={menuStyles[`${menuClassName}__list`]}>
         {data.slice(0, 4).map((item, indexItem) => getItem(item, indexItem, null))}
         {data.slice(4).map((item, indexItem) => getItem(item, indexItem, menuStyles[`${menuClassName}__item-hidden`]))}

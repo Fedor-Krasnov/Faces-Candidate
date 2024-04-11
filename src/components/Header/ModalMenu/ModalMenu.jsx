@@ -26,13 +26,13 @@ const ModalMenu = () => {
     >
       <div className={modalMenuStyles[modalMenuClassName]}>
         <div className={modalMenuStyles[`${modalMenuClassName}__content`]}>
-          <Menu data={subMenuData} />
-          <Menu data={mainMenuData} />
-          <UserPanel isLogged={isLogged} />
-          <p className={modalMenuStyles[`${modalMenuClassName}__registration`]}>
-            Еще нет аккаунта?
-            <a href="#">Зарегистрироваться</a>
-          </p>
+          <Menu data={subMenuData} isModal />
+          {/* <Menu data={mainMenuData} /> */}
+          {/* <UserPanel isLogged={isLogged} /> */}
+          {/* <p className={modalMenuStyles[`${modalMenuClassName}__registration`]}> */}
+          {/*   Еще нет аккаунта? */}
+          {/*   <a href="#">Зарегистрироваться</a> */}
+          {/* </p> */}
         </div>
       </div>
     </CSSTransition>
