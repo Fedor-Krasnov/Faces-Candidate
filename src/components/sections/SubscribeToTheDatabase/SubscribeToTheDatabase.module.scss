@@ -1,7 +1,60 @@
+@use '/src/assets/styles/variables/colors';
+
 .subscribe-to-the-database{
+  $selector: &;
+
   display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 
-  &__right-block-content {
+  &__left-block-img {
+    width: 70%;
+    margin: auto;
+  }
 
+  &__right-block-content-container {
+    background-color: colors.$white;
+    padding: 32px 40px 44px 40px;
+    border-radius: 20px 20px 0 0;
+
+    input {
+      height: 45px;
+    }
+
+    button {
+      margin-top: 30px;
+      height: 45px;
+    }
+
+    #{$selector}__title {
+      text-align: center;
+      row-gap: 5px;
+
+      p {
+        font-size: 24px;
+      }
+    }
+
+    #{$selector}__questionnaire {
+      display: grid;
+      row-gap: 20px;
+      margin-top: 30px;
+    }
+  }
+
+  &__warning {
+    background-color: colors.$ghost-white;
+    border-radius: 0 0 20px 20px;
+    padding: 24px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 12px;
+    justify-content: space-between;
+    border-top: 2px solid colors.$platinum;
+
+    p {
+      font-size: 12px;
+    }
   }
 }
