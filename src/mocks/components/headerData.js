@@ -1,4 +1,8 @@
 export const headerData = {
-  linkModalProfile: '#',
+  linkModalProfile: '/user-profile',
   linkModalExit: '#',
+  popup: {
+    pupupButtonProfile: 'Посмотреть профиль',
+    pupupButtonExit: 'Выйти',
+  },
 };

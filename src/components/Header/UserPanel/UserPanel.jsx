@@ -10,7 +10,7 @@ const userPanelClassName = 'user-panel';
 const user = 'Fedor Krasnov';
 
 const UserPanel = ({ isLogged }) => {
-  const { linkModalProfile, linkModalExit } = headerData;
+  const { linkModalProfile, linkModalExit, popup } = headerData;
   const getAbbrUser = (user) => {
     const userArray = user.split(' ');
 
@@ -29,19 +29,31 @@ const UserPanel = ({ isLogged }) => {
             <span>{getAbbrUser(user)}</span>
             <span>{user}</span>
           </div>
-          <div className={userPanelStyles[`${userPanelClassName}__popup`]}>
-            <Link className={userPanelStyles[`${userPanelClassName}__popup-content`]} to={linkModalProfile}>
-              <p>Посмотреть профиль</p>
-              <Icon code={IconCode.user} />
-            </Link>
-            <Link className={userPanelStyles[`${userPanelClassName}__popup-content`]} to={linkModalExit}>
-              <span>Выйти</span>
-              <Icon className={userPanelStyles[`${userPanelClassName}__icon-exit`]} code={IconCode.exit} />
-            </Link>
-          </div>
+          <nav className={userPanelStyles[`${userPanelClassName}__popup`]}>
+            <ul>
+              <li>
+                <Link to={linkModalProfile}>
+                  <p
+                    className={userPanelStyles[`${userPanelClassName}__popup-button-profile`]}
+                    dangerouslySetInnerHTML={{ __html: popup.pupupButtonProfile }}
+                  />
+                  <Icon code={IconCode.user} />
+                </Link>
+              </li>
+              <li>
+                <Link to={linkModalExit}>
+                  <p
+                    className={userPanelStyles[`${userPanelClassName}__popup-button-exit`]}
+                    dangerouslySetInnerHTML={{ __html: popup.pupupButtonExit }}
+                  />
+                  <Icon className={userPanelStyles[`${userPanelClassName}__icon-exit`]} code={IconCode.exit} />
+                </Link>
+              </li>
+            </ul>
+          </nav>
         </>
       ) : (
-        <Button title="Войти" to="/user-profile" />
+        <Button title="Войти" />
       )}
     </div>
   );

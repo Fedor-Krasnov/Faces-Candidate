@@ -66,27 +66,38 @@
     gap: 5px;
     right: 0;
 
-    #{$selector}__popup-content {
+    li {
+      &:last-child {
+        border-top: 1px solid colors.$platinum;
+        padding-top: 5px;
+      }
+    }
+
+    a {
       display: flex;
       align-items: center;
       gap: 5px;
 
-      &:last-child {
-        border-top: 1px solid colors.$platinum;
-        padding-top: 5px;
+      span {
+        color: colors.$red;
       }
 
       svg {
         width: 18px;
       }
 
+      #{$selector}__popup-button-exit {
+        color: colors.$red;
+        cursor: pointer;
+      }
+
+      #{$selector}__popup-button-profile {
+        cursor: pointer;
+      }
+
       #{$selector}__icon-exit {
         fill: colors.$red;
       }
-    }
-
-    span {
-      color: colors.$red;
     }
   }
 }

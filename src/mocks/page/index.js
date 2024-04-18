@@ -1,0 +1,1 @@
+export { userProfilePageData } from './userProfilePageData';
