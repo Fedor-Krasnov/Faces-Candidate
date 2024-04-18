@@ -31,7 +31,7 @@ const UserPanel = ({ isLogged }) => {
           </div>
           <nav className={userPanelStyles[`${userPanelClassName}__popup`]}>
             <ul>
-              <li>
+              <li className={userPanelStyles[`${userPanelClassName}__popup-content`]}>
                 {popupContent.map(({ popupIcon, popupButton }, popupIndex) => (
                   <Link key={popupIndex} to={linkModalProfile}>
                     <p

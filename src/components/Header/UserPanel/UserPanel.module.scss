@@ -66,6 +66,10 @@
     gap: 5px;
     right: 0;
 
+    #{$selector}__popup-content {
+      margin-bottom: 5px;
+    }
+
     li {
       &:last-child {
         border-top: 1px solid colors.$platinum;
