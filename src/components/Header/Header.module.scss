@@ -10,7 +10,7 @@
   padding-bottom: mixins.clamps(60px, 80px);
 
   &__logo {
-    translate: 0 -3px;
+    translate: 0 1px;
 
     @media screen and (max-width: 1200px) {
       translate: none;
