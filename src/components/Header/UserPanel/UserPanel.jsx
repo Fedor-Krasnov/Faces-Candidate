@@ -10,7 +10,7 @@ const userPanelClassName = 'user-panel';
 const user = 'Fedor Krasnov';
 
 const UserPanel = ({ isLogged }) => {
-  const { linkModalProfile, linkModalExit, popup } = headerData;
+  const { linkModalProfile, linkModalExit, popupContent, popupButtonExit } = headerData;
   const getAbbrUser = (user) => {
     const userArray = user.split(' ');
 
@@ -32,19 +32,21 @@ const UserPanel = ({ isLogged }) => {
           <nav className={userPanelStyles[`${userPanelClassName}__popup`]}>
             <ul>
               <li>
-                <Link to={linkModalProfile}>
-                  <p
-                    className={userPanelStyles[`${userPanelClassName}__popup-button-profile`]}
-                    dangerouslySetInnerHTML={{ __html: popup.pupupButtonProfile }}
-                  />
-                  <Icon code={IconCode.user} />
-                </Link>
+                {popupContent.map(({ popupIcon, popupButton }, popupIndex) => (
+                  <Link key={popupIndex} to={linkModalProfile}>
+                    <p
+                      className={userPanelStyles[`${userPanelClassName}__popup-button-profile`]}
+                      dangerouslySetInnerHTML={{ __html: popupButton }}
+                    />
+                    <Icon code={popupIcon} />
+                  </Link>
+                ))}
               </li>
               <li>
                 <Link to={linkModalExit}>
                   <p
                     className={userPanelStyles[`${userPanelClassName}__popup-button-exit`]}
-                    dangerouslySetInnerHTML={{ __html: popup.pupupButtonExit }}
+                    dangerouslySetInnerHTML={{ __html: popupButtonExit }}
                   />
                   <Icon className={userPanelStyles[`${userPanelClassName}__icon-exit`]} code={IconCode.exit} />
                 </Link>
