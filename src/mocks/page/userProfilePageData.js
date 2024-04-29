@@ -1,1 +1,3 @@
-export const userProfilePageData = {};
+export const userProfilePageData = {
+  userName: 'Fedor Krasnov',
+};
