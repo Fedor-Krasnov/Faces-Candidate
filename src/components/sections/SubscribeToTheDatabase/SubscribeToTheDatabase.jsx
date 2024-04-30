@@ -1,12 +1,11 @@
 import React from 'react';
-import { subscribeToTheDatabaseData } from '../../../mocks/sections';
 import { Button, Input, Title } from '../../units';
 import subscribeToTheDatabaseStyles from './SubscribeToTheDatabase.module.scss';
 
 const subscribeToTheDatabaseClassName = 'subscribe-to-the-database';
 
-const SubscribeToTheDatabase = () => {
-  const { title, description, image, questionnaire, buttonTitle, href } = subscribeToTheDatabaseData;
+const SubscribeToTheDatabase = ({ content }) => {
+  const { title, description, image, questionnaire, buttonTitle, href } = content;
 
   return (
     <section className={subscribeToTheDatabaseStyles[subscribeToTheDatabaseClassName]}>
