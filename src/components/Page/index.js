@@ -1,3 +1,3 @@
 export { Page } from './Page';
-export { HomePage } from './HomePage';
-export { UserProfilePage } from './UserProfilePage';
+export { PageLayout } from './PageLayout';
+export { PageContent } from './PageContent';
