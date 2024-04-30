@@ -1,4 +1,4 @@
-import { advantagesData, agitationData, directionOfWorkData } from '../sections';
+import { advantagesData, agitationData, candidatesData, directionOfWorkData } from '../sections';
 
 export const pages = [
   {
@@ -17,7 +17,7 @@ export const pages = [
         type: 'advantages',
       },
       {
-        content: '',
+        content: candidatesData,
         type: 'candidates',
       },
       {

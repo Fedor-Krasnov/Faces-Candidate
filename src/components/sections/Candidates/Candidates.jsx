@@ -1,13 +1,12 @@
 import React from 'react';
-import { candidatesData } from '../../../mocks/sections';
 import { Title } from '../../units';
 import { UserCard } from '../../UserCard';
 import candidatesStyles from './Candidates.module.scss';
 
 const candidatesClassName = 'candidates';
 
-const Candidates = () => {
-  const { title } = candidatesData;
+const Candidates = ({ content }) => {
+  const { title } = content;
 
   return (
     <section className={candidatesStyles[candidatesClassName]}>
