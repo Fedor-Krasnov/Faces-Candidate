@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { directionOfWorkData } from '../../../mocks/sections';
 import { Icon, Title } from '../../units';
 import directionOfWorkStyles from './DirectionOfWork.module.scss';
 
 const directionOfWorkClassName = 'direction-of-work';
 
-const DirectionOfWork = () => {
-  const { title, options } = directionOfWorkData;
+const DirectionOfWork = ({ content }) => {
+  const { title, options } = content;
 
   return (
     <section className={directionOfWorkStyles[directionOfWorkClassName]}>

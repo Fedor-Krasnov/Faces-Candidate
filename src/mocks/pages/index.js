@@ -1,4 +1,4 @@
-import { advantagesData, agitationData } from '../sections';
+import { advantagesData, agitationData, directionOfWorkData } from '../sections';
 
 export const pages = [
   {
@@ -9,7 +9,7 @@ export const pages = [
         type: 'agitation',
       },
       {
-        content: '',
+        content: directionOfWorkData,
         type: 'direction-of-work',
       },
       {
