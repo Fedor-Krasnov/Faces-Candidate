@@ -1,12 +1,11 @@
 import React from 'react';
-import { agitationData } from '../../../mocks/sections';
 import { Button, Title } from '../../units';
 import agitationStyles from './Agitation.module.scss';
 
 const agitationClassName = 'agitation';
 
-const Agitation = () => {
-  const { image, buttonTitle, buttonTitleOutline, description, title } = agitationData;
+const Agitation = ({ content }) => {
+  const { image, buttonTitle, buttonTitleOutline, description, title } = content;
 
   return (
     <section className={agitationStyles[agitationClassName]}>

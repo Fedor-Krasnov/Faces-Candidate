@@ -1,11 +1,11 @@
-import { advantagesData } from '../sections';
+import { advantagesData, agitationData } from '../sections';
 
 export const pages = [
   {
     pathname: '/',
     sections: [
       {
-        content: '',
+        content: agitationData,
         type: 'agitation',
       },
       {
