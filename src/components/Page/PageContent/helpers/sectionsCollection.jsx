@@ -2,7 +2,7 @@ import React from 'react';
 import { sectionTypeToComponentMap } from '../../../sections/sections';
 
 export const sectionsCollection = (sections) =>
-  sections.map(({ type }) => {
+  sections.map(({ content, type }) => {
     const PageSection = sectionTypeToComponentMap[type];
 
     if (!PageSection) {
@@ -13,7 +13,7 @@ export const sectionsCollection = (sections) =>
 
     return (
       <section key={type}>
-        <PageSection />
+        <PageSection content={content} />
       </section>
     );
   });

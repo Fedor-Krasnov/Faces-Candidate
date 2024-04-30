@@ -1,12 +1,11 @@
 import React from 'react';
-import { advantagesData } from '../../../mocks/sections';
 import { Button, Icon, Title } from '../../units';
 import advantagesStyles from './Advantages.module.scss';
 
 const advantagesClassName = 'advantages';
 
-const Advantages = () => {
-  const { titleLeftBlock, titleRightBlock, descriptionRightBlock, buttonTitle, dataPrice, points } = advantagesData;
+const Advantages = ({ content }) => {
+  const { titleLeftBlock, titleRightBlock, descriptionRightBlock, buttonTitle, dataPrice, points } = content;
 
   return (
     <section className={advantagesStyles[advantagesClassName]}>

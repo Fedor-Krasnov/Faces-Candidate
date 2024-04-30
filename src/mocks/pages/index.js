@@ -1,3 +1,5 @@
+import { advantagesData } from '../sections';
+
 export const pages = [
   {
     pathname: '/',
@@ -11,7 +13,7 @@ export const pages = [
         type: 'direction-of-work',
       },
       {
-        content: '',
+        content: advantagesData,
         type: 'advantages',
       },
       {
