@@ -9,6 +9,11 @@ import {
 export const pages = [
   {
     pathname: '/',
+    seo: {
+      title: 'Faces-Candidate',
+      description: '',
+      keywords: '',
+    },
     sections: [
       {
         content: agitationData,
@@ -34,6 +39,11 @@ export const pages = [
   },
   {
     pathname: '/user-profile',
+    seo: {
+      title: 'User profile - Faces-Candidate',
+      description: '',
+      keywords: '',
+    },
     sections: [
       {
         content: '',
