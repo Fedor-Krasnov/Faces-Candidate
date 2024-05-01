@@ -1,7 +1,9 @@
 import React from 'react';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
+import { getRandomInteger } from '../../../helpers';
 import { headerData } from '../../../mocks';
+import { userColors } from '../../../mocks/initial';
 import { Button, Icon } from '../../units';
 import { IconCode } from '../../units/Icon';
 import userPanelStyles from './UserPanel.module.scss';
@@ -25,7 +27,10 @@ const UserPanel = ({ isLogged }) => {
     >
       {isLogged ? (
         <>
-          <div className={userPanelStyles[`${userPanelClassName}__user`]}>
+          <div
+            className={userPanelStyles[`${userPanelClassName}__user`]}
+            style={{ '--user-color': userColors[getRandomInteger(0, userColors.length)] }}
+          >
             <span>{getAbbrUser(user)}</span>
             <span>{user}</span>
           </div>
