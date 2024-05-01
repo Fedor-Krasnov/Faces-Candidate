@@ -1,4 +1,4 @@
-import { Advantages, Agitation, Candidates, DirectionOfWork, SubscribeToTheDatabase } from '../sections';
+import { Advantages, Agitation, Candidates, DirectionOfWork, SubscribeToTheDatabase, UserProfile } from '../sections';
 
 export const SectionType = {
   advantages: 'advantages',
@@ -6,6 +6,7 @@ export const SectionType = {
   candidates: 'candidates',
   directionOfWork: 'direction-of-work',
   subscribeToTheDatabase: 'subscribe-to-the-database',
+  userProfile: 'user-profile',
 };
 
 export const sectionTypeToComponentMap = {
@@ -14,4 +15,5 @@ export const sectionTypeToComponentMap = {
   [SectionType.candidates]: Candidates,
   [SectionType.directionOfWork]: DirectionOfWork,
   [SectionType.subscribeToTheDatabase]: SubscribeToTheDatabase,
+  [SectionType.userProfile]: UserProfile,
 };

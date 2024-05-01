@@ -32,4 +32,13 @@ export const pages = [
       },
     ],
   },
+  {
+    pathname: '/user-profile',
+    sections: [
+      {
+        content: '',
+        type: 'user-profile',
+      },
+    ],
+  },
 ];
