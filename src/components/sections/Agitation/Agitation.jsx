@@ -8,7 +8,7 @@ const Agitation = ({ content }) => {
   const { image, buttonTitle, buttonTitleOutline, description, title } = content;
 
   return (
-    <section className={agitationStyles[agitationClassName]}>
+    <div className={agitationStyles[agitationClassName]}>
       <div className={agitationStyles[`${agitationClassName}__content`]}>
         <Title description={description} title={title} titleLevel="h1" />
         <div className={agitationStyles[`${agitationClassName}__button-container`]}>
@@ -19,7 +19,7 @@ const Agitation = ({ content }) => {
       <div className={agitationStyles[`${agitationClassName}__image`]}>
         <img alt={image.alt} src={image.src} />
       </div>
-    </section>
+    </div>
   );
 };
 
