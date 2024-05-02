@@ -9,7 +9,7 @@ const DirectionOfWork = ({ content }) => {
   const { title, options } = content;
 
   return (
-    <section className={directionOfWorkStyles[directionOfWorkClassName]}>
+    <div className={directionOfWorkStyles[directionOfWorkClassName]}>
       <Title title={title} titleLevel="h2" />
       <div className={directionOfWorkStyles[`${directionOfWorkClassName}__container`]}>
         {options.map(({ icon, optionsTitle }, optionIndex) => (
@@ -19,7 +19,7 @@ const DirectionOfWork = ({ content }) => {
           </Link>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 
