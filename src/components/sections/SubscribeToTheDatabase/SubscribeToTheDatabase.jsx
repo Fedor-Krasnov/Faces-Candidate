@@ -8,7 +8,7 @@ const SubscribeToTheDatabase = ({ content }) => {
   const { title, description, image, questionnaire, buttonTitle, href } = content;
 
   return (
-    <section className={subscribeToTheDatabaseStyles[subscribeToTheDatabaseClassName]}>
+    <div className={subscribeToTheDatabaseStyles[subscribeToTheDatabaseClassName]}>
       <div className={subscribeToTheDatabaseStyles[`${subscribeToTheDatabaseClassName}__left-block-img`]}>
         <img alt={image.alt} src={image.src} />
       </div>
@@ -36,7 +36,7 @@ const SubscribeToTheDatabase = ({ content }) => {
           </p>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
