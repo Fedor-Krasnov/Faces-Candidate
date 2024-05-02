@@ -8,7 +8,7 @@ const Advantages = ({ content }) => {
   const { titleLeftBlock, titleRightBlock, descriptionRightBlock, buttonTitle, dataPrice, points } = content;
 
   return (
-    <section className={advantagesStyles[advantagesClassName]}>
+    <div className={advantagesStyles[advantagesClassName]}>
       <div className={advantagesStyles[`${advantagesClassName}__left-block`]}>
         <Title title={titleLeftBlock} titleLevel="h2" />
         <div className={advantagesStyles[`${advantagesClassName}__points`]}>
@@ -35,7 +35,7 @@ const Advantages = ({ content }) => {
         />
         <Button className={advantagesStyles[`${advantagesClassName}__button`]} secondary title={buttonTitle} />
       </div>
-    </section>
+    </div>
   );
 };
 
