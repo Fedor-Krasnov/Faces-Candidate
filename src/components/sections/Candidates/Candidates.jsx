@@ -9,12 +9,12 @@ const Candidates = ({ content }) => {
   const { title } = content;
 
   return (
-    <section className={candidatesStyles[candidatesClassName]}>
+    <div className={candidatesStyles[candidatesClassName]}>
       <Title className={candidatesStyles[`${candidatesClassName}__title`]} title={title} />
       <div className={candidatesStyles[`${candidatesClassName}__container`]}>
         <UserCard />
       </div>
-    </section>
+    </div>
   );
 };
 
