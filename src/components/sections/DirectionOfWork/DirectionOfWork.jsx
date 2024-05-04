@@ -41,7 +41,6 @@ const DirectionOfWork = ({ content }) => {
     <div className={directionOfWorkStyles[directionOfWorkClassName]}>
       <Title title={title} titleLevel="h2" />
       {isBreakpointMd ? <MouseMoveContainer>{contentElement}</MouseMoveContainer> : contentElement}
-      <MouseMoveContainer></MouseMoveContainer>
     </div>
   );
 };
