@@ -21,7 +21,7 @@ const Menu = ({ data, isModal }) => {
   );
 
   const handleClick = () => {
-    if (isOpenRef.current) {
+    if (!isOpenRef.current) {
       ulRef.current.classList.add(menuStyles[`${menuClassName}__list-more-open`]);
       ulRef.current.classList.remove(menuStyles[`${menuClassName}__list-more-close`]);
     } else {
