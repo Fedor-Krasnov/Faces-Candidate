@@ -1,4 +1,6 @@
+@use 'src/assets/styles/mixins';
 @use 'src/assets/styles/variables/colors';
+@use 'src/assets/styles/variables/typography';
 
 .direction-of-work {
   $selector: &;
@@ -32,6 +34,10 @@
             transition: transform 0.8s ease;
           }
         }
+
+        #{$selector}__count {
+          border-color: colors.$white;
+        }
       }
     }
 
@@ -56,10 +62,30 @@
         border-radius: 12px;
         overflow: hidden;
       }
+    }
 
-      & + div {
-        z-index: 1;
-      }
+    #{$selector}__option-title {
+      @include mixins.font(typography.$font-24px-to-18px);
+
+      z-index: 1;
+    }
+
+    #{$selector}__count {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+      border: 1px solid colors.$golden-sand;
+      width: 26px;
+      height: auto;
+      aspect-ratio: 1;
+      z-index: 1;
+      transition: all 0.5s ease;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      font-size: 12px;
+      background-color: colors.$white;
     }
   }
 
