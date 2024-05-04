@@ -10,7 +10,7 @@
     justify-content: center;
   }
 
-  &__container {
+  &__content {
     display: grid;
     margin-top: 25px;
     gap: 24px;
@@ -90,20 +90,20 @@
   }
 
   @media screen and (max-width: 1024px) {
-    &__container {
+    &__content {
       grid-template-columns: repeat(3, 1fr);
     }
   }
 
   @media screen and (max-width: 768px) {
-    &__container {
-      grid-template-columns: repeat(2, 1fr);
+    &__content {
+      //grid-template-columns: repeat(2, 1fr);
     }
   }
 
   @media screen and (max-width: 576px) {
-    &__container {
-      grid-template-columns: repeat(1, 1fr);
+    &__content {
+      //grid-template-columns: repeat(1, 1fr);
     }
   }
 }
