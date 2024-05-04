@@ -14,7 +14,9 @@ const DirectionOfWork = ({ content }) => {
       <div className={directionOfWorkStyles[`${directionOfWorkClassName}__container`]}>
         {options.map(({ icon, optionsTitle }, optionIndex) => (
           <Link key={optionIndex} className={directionOfWorkStyles[`${directionOfWorkClassName}__options`]} to="tmp">
-            <Icon code={icon} />
+            <div className={directionOfWorkStyles[`${directionOfWorkClassName}__icon`]}>
+              <Icon code={icon} />
+            </div>
             <div dangerouslySetInnerHTML={{ __html: optionsTitle }} />
           </Link>
         ))}

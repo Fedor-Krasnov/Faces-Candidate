@@ -22,7 +22,44 @@
       border-radius: 10px;
       padding: 10px;
       background-color: colors.$white;
+      position: relative;
+      overflow: hidden;
 
+      &:hover {
+        #{$selector}__icon {
+          &::before {
+            transform: scale(17);
+            transition: transform 0.8s ease;
+          }
+        }
+      }
+    }
+
+    #{$selector}__icon {
+      display: grid;
+      position: relative;
+
+      svg {
+        z-index: 1;
+      }
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: colors.$golden-sand;
+        transform: scale(1);
+        transition: transform 0.5s ease;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      & + div {
+        z-index: 1;
+      }
     }
   }
 
