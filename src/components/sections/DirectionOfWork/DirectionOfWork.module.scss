@@ -8,13 +8,31 @@
   h2 {
     display: flex;
     justify-content: center;
+    padding: 0 16px;
+  }
+
+  &__container {
+    display: grid;
+    margin-top: 25px;
   }
 
   &__content {
     display: grid;
-    margin-top: 25px;
-    gap: 24px;
+    gap: mixins.clamps(10px, 24px);
     grid-template-columns: repeat(4, 1fr);
+    padding: 0 16px;
+
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(4, 1fr);
+
+      #{$selector}__options {
+        min-width: 250px;
+      }
+    }
 
     #{$selector}__options {
       display: flex;
@@ -86,24 +104,6 @@
       right: 5px;
       font-size: 12px;
       background-color: colors.$white;
-    }
-  }
-
-  @media screen and (max-width: 1024px) {
-    &__content {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    &__content {
-      //grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media screen and (max-width: 576px) {
-    &__content {
-      //grid-template-columns: repeat(1, 1fr);
     }
   }
 }
