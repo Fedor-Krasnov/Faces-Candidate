@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Icon, Title } from '../../units';
+import { useMobileVersion } from '../../../hooks/index.js';
+import { Icon, MouseMoveContainer, Title } from '../../units';
 import directionOfWorkStyles from './DirectionOfWork.module.scss';
 
 const directionOfWorkClassName = 'direction-of-work';
@@ -8,10 +9,11 @@ const directionOfWorkClassName = 'direction-of-work';
 const DirectionOfWork = ({ content }) => {
   const { title, options } = content;
 
-  return (
-    <div className={directionOfWorkStyles[directionOfWorkClassName]}>
-      <Title title={title} titleLevel="h2" />
-      <div className={directionOfWorkStyles[`${directionOfWorkClassName}__container`]}>
+  const { isBreakpointMd } = useMobileVersion();
+
+  const contentElement = (
+    <div className={directionOfWorkStyles[`${directionOfWorkClassName}__container`]}>
+      <div className={directionOfWorkStyles[`${directionOfWorkClassName}__content`]}>
         {options.map(({ icon, optionsTitle, count }, optionIndex) => {
           const modificationCount = count >= 100 ? '99+' : count;
 
@@ -32,6 +34,14 @@ const DirectionOfWork = ({ content }) => {
           );
         })}
       </div>
+    </div>
+  );
+
+  return (
+    <div className={directionOfWorkStyles[directionOfWorkClassName]}>
+      <Title title={title} titleLevel="h2" />
+      {isBreakpointMd ? <MouseMoveContainer>{contentElement}</MouseMoveContainer> : contentElement}
+      <MouseMoveContainer></MouseMoveContainer>
     </div>
   );
 };

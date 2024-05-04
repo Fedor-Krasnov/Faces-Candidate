@@ -1,5 +1,8 @@
 import React from 'react';
+import classNames from 'classnames';
 import { sectionTypeToComponentMap } from '../../../sections/sections';
+import { pageContentSectionClassName } from '../../constants';
+import pageContentStyles from '../PageContent.module.scss';
 
 export const sectionsCollection = (sections) =>
   sections.map(({ content, type }) => {
@@ -12,7 +15,13 @@ export const sectionsCollection = (sections) =>
     }
 
     return (
-      <section key={type}>
+      <section
+        className={classNames(
+          pageContentStyles[pageContentSectionClassName],
+          pageContentStyles[`${pageContentSectionClassName}_${type}`],
+        )}
+        key={type}
+      >
         <PageSection content={content} />
       </section>
     );

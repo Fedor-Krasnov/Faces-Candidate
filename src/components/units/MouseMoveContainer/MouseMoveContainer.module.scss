@@ -1,0 +1,17 @@
+.mouse-move-container {
+  /* ... */
+
+  &__content {
+    overflow-x: scroll;
+    user-select: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__content-moving {
+    cursor: grab;
+    pointer-events: none;
+  }
+}
