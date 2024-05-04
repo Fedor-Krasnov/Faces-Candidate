@@ -1,1 +1,1 @@
-export const userColors = ['#c7d2fe', '#ff7d7d', '#a3ff9b', '#fff96c', '#e1a2ff'];
+export const userColors = ['#c7d2fe', '#fee2e2', '#d1fae5', '#fef3c7'];
