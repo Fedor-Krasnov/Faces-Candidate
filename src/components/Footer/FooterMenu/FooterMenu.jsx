@@ -16,7 +16,11 @@ const FooterMenu = () => {
           <ul className={footerMenuStyles[`${footerMenuClassName}__menu`]}>
             {menu.map(({ link, text }, indexMenu) => (
               <li key={indexMenu}>
-                <Link dangerouslySetInnerHTML={{ __html: text }} to={link} />
+                <Link
+                  className={footerMenuStyles[`${footerMenuClassName}__link`]}
+                  dangerouslySetInnerHTML={{ __html: text }}
+                  to={link}
+                />
               </li>
             ))}
           </ul>

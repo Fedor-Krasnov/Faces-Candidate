@@ -1,3 +1,5 @@
+@use 'src/assets/styles/mixins';
+
 .footer-menu {
   display: grid;
   gap: 30px;
@@ -11,5 +13,9 @@
 
   @media screen and (max-width: 425px) {
     grid-template-columns: none;
+  }
+
+  &__link {
+    @include mixins.link-yellow-underline;
   }
 }

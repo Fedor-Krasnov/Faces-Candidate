@@ -1,5 +1,6 @@
 @use 'sass:math';
 @use 'sass:list';
+@use 'src/assets/styles/variables/colors';
 
 @mixin container1280 {
   margin: 0 auto;
@@ -19,6 +20,28 @@
     font-size: clamps(list.nth($min, 1), list.nth($max, 1));
     font-weight: $font-weight;
     line-height: clamps(list.nth($min, 2), list.nth($max, 2));
+  }
+}
+
+@mixin link-yellow-underline {
+  padding: 12px 0;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 12px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: colors.$light-yellow;
+    transform: scaleX(0);
+    transition: transform .5s ease;
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
   }
 }
 

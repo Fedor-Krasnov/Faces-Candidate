@@ -12,7 +12,11 @@ const CopyrightLinks = () => {
     <ul className={copyrightLinksStyles[copyrightLinksClassName]}>
       {copyright.copyrightLinks.map(({ link, text }, copyrightIndex) => (
         <li key={copyrightIndex}>
-          <Link dangerouslySetInnerHTML={{ __html: text }} to={link} />
+          <Link
+            className={copyrightLinksStyles[`${copyrightLinksClassName}__link`]}
+            dangerouslySetInnerHTML={{ __html: text }}
+            to={link}
+          />
         </li>
       ))}
     </ul>
