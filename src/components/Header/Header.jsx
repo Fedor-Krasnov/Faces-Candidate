@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ModalMenuContext } from '../../contexts';
 import { useMobileVersion } from '../../hooks';
 import { mainMenuData, subMenuData } from '../../mocks';
-import { Logo } from '../units';
+import { Button, Logo } from '../units';
 import { Burger } from './Burger';
 import headerStyles from './Header.module.scss';
 import { Menu } from './Menu';

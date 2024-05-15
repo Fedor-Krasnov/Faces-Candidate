@@ -33,7 +33,6 @@
     width: 100%;
     background-color: colors.$white;
     align-items: center;
-    justify-content: space-between;
     margin-bottom: 30px;
     padding: 70px 18px 25px;
     transition: transform 1s cubic-bezier(0.76, 0, 0.24, 1), opacity 1s ease;
@@ -41,11 +40,32 @@
     box-shadow: 0 0 10px colors.$yellow;
     opacity: 0;
 
+    #{$selector}__menu {
+      border-bottom: 1px solid colors.$platinum;
+      margin: 0 -18px;
+      padding: 18px;
+    }
+
     #{$selector}__registration {
       display: flex;
 
       a {
         color: colors.$red;
+      }
+    }
+
+    #{$selector}__authorization-section {
+      display: grid;
+
+      p {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+        column-gap: 5px;
+
+        #{$selector}__registration-button {
+          color: colors.$red;
+        }
       }
     }
   }
