@@ -3,7 +3,6 @@ import { CSSTransition } from 'react-transition-group';
 import { useModalMenuContext } from '../../../contexts';
 import { mainMenuData, subMenuData } from '../../../mocks';
 import { Menu } from '../Menu';
-import { UserPanel } from '../UserPanel';
 import modalMenuStyles from './ModalMenu.module.scss';
 
 const modalMenuClassName = 'modal-menu';
@@ -26,7 +25,12 @@ const ModalMenu = () => {
     >
       <div className={modalMenuStyles[modalMenuClassName]}>
         <div className={modalMenuStyles[`${modalMenuClassName}__content`]}>
-          <Menu data={subMenuData} isModal />
+          <div>
+            <Menu data={subMenuData} isModal />
+          </div>
+          <div>
+            <Menu data={mainMenuData} isModal />
+          </div>
         </div>
       </div>
     </CSSTransition>

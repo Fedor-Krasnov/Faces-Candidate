@@ -14,8 +14,10 @@
     background-color: rgba(0, 0, 0, 0.2);
 
     #{$selector}__content {
+      display: grid;
       transform: translateY(0);
       opacity: 1;
+      row-gap: 20px;
     }
   }
 
