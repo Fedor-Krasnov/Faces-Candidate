@@ -2,14 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import { useModalMenuContext } from '../../../contexts';
-import { mainMenuData, subMenuData } from '../../../mocks';
-import { Button } from '../../units/index.js';
+import { headerData, mainMenuData, subMenuData } from '../../../mocks';
+import { Button } from '../../units';
 import { Menu } from '../Menu';
 import modalMenuStyles from './ModalMenu.module.scss';
 
 const modalMenuClassName = 'modal-menu';
 
 const ModalMenu = () => {
+  const { linkTitle, buttonTitle, question } = headerData;
   const isLogged = false;
   const { isModalMenuOpen } = useModalMenuContext();
 
@@ -37,12 +38,14 @@ const ModalMenu = () => {
             <div></div>
           ) : (
             <div className={modalMenuStyles[`${modalMenuClassName}__authorization-section`]}>
-              <Button title="Войти" />
+              <Button title={buttonTitle} />
               <p>
-                Еще нет аккаунта?
-                <Link className={modalMenuStyles[`${modalMenuClassName}__registration-button`]} to="tmp">
-                  Зарегистрироваться
-                </Link>
+                {question}
+                <Link
+                  className={modalMenuStyles[`${modalMenuClassName}__registration-button`]}
+                  dangerouslySetInnerHTML={{ __html: linkTitle }}
+                  to="tmp"
+                />
               </p>
             </div>
           )}
