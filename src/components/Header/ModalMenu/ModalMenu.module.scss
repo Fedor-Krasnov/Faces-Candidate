@@ -43,7 +43,7 @@
     #{$selector}__menu {
       border-bottom: 1px solid colors.$platinum;
       margin: 0 -18px;
-      padding: 18px;
+      padding: 0 18px 10px 18px;
     }
 
     #{$selector}__registration {
