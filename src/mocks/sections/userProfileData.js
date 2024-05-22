@@ -1,6 +1,6 @@
 export const userProfileData = {
-  title: 'Оформить подписку',
   buttonTitle: 'Оформить',
+  titleSubscribe: 'Оформить подписку',
   subscriptionContent: [
     {
       validity: '1 месяц',

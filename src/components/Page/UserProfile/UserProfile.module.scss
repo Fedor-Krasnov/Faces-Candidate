@@ -1,7 +1,9 @@
 @use '/src/assets/styles/variables/colors';
 
 .user-profile {
-  width: 33.33%;
+  display: flex;
+  //width: 33.33%;
+  column-gap: 30px;
 
   h4 {
     font-size: 24px;

@@ -6,13 +6,13 @@ import subscriptionSectionStyles from './SubscriptionSection.module.scss';
 const subscriptionSectionClassName = 'subscription-section';
 
 const SubscriptionSection = () => {
-  const { title, buttonTitle, subscriptionContent } = userProfileData;
+  const { titleSubscribe, buttonTitle, subscriptionContent } = userProfileData;
 
   return (
     <section className={subscriptionSectionStyles[subscriptionSectionClassName]}>
       <Title
         className={subscriptionSectionStyles[`${subscriptionSectionClassName}__subscription-title`]}
-        title={title}
+        title={titleSubscribe}
         titleLevel="h4"
       />
       <div className={subscriptionSectionStyles[`${subscriptionSectionClassName}__subscription-content`]}>
