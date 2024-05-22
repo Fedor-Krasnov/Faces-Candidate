@@ -3,44 +3,7 @@
 .user-profile {
   width: 33.33%;
 
-  $selector: &;
-
   h4 {
     font-size: 24px;
-  }
-
-  &__subscription-section {
-    display: grid;
-    background-color: colors.$white;
-    border-radius: 15px;
-    padding: 30px 40px;
-
-    #{$selector}__subscription-title {
-      margin-bottom: 30px;
-    }
-
-    #{$selector}__subscription-content {
-      display: grid;
-      row-gap: 15px;
-    }
-
-    #{$selector}__subscription-offers {
-      display: flex;
-      justify-content: space-between;
-      gap: 15px;
-
-      div {
-        display: flex;
-      }
-
-      p {
-        display: flex;
-        align-items: center;
-
-        &:nth-child(2) {
-          margin-left: 15px;
-        }
-      }
-    }
   }
 }
