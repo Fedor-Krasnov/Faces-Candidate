@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { userProfileData } from '../../../mocks/sections';
-import { Title } from '../../units';
+import { userProfileData } from '../../../mocks/sections/index.js';
+import { Title } from '../../units/index.js';
 import userStatisticsStyles from './UserStatistics.module.scss';
 
 const userStatisticsClassName = 'user-statistics';
@@ -19,7 +19,7 @@ const UserStatistics = () => {
   } = userProfileData;
 
   return (
-    <section className={userStatisticsStyles[userStatisticsClassName]}>
+    <div className={userStatisticsStyles[userStatisticsClassName]}>
       <div className={userStatisticsStyles[`${userStatisticsClassName}__container`]}>
         <div className={userStatisticsStyles[`${userStatisticsClassName}__contacts`]}>
           <Title title={titleStatistic} titleLevel="h4" />
@@ -44,7 +44,7 @@ const UserStatistics = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

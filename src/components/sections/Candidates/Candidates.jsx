@@ -1,6 +1,6 @@
 import React from 'react';
+import { UserCard } from '../../innerComponets/UserCard';
 import { Title } from '../../units';
-import { UserCard } from '../../UserCard';
 import candidatesStyles from './Candidates.module.scss';
 
 const candidatesClassName = 'candidates';

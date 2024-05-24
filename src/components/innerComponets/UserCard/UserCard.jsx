@@ -1,6 +1,6 @@
 import React from 'react';
-import { userCardData } from '../../mocks/components/userCardData';
-import { Button, Title } from '../units';
+import { userCardData } from '../../../mocks/components/userCardData.js';
+import { Button, Title } from '../../units/index.js';
 import userCardStyles from './UserCard.module.scss';
 
 const userCardClassName = 'user-card';

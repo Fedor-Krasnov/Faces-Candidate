@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import { sectionTypeToComponentMap } from '../../../sections/sections';
-import { pageContentSectionClassName } from '../../constants.js';
+import { pageContentSectionClassName } from '../../constants';
 import pageContentStyles from '../PageContent.module.scss';
 
 export const sectionsCollection = (sections) =>

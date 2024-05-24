@@ -1,14 +1,15 @@
 import React from 'react';
-import { SubscriptionSection } from '../../sections/SubscriptionSection';
-import { UserStatistics } from '../../sections/UserStatistics';
+import { ServiceSubscription } from '../../innerComponets/ServiceSubscription';
+import { UserStatistics } from '../../innerComponets/UserStatistics';
 import userProfileStyles from './UserProfile.module.scss';
 
 const userProfileClassName = 'user-profile';
 
+// TODO: Добавить данные с бэка с помощью content
+
 const UserProfile = () => (
   <div className={userProfileStyles[userProfileClassName]}>
-    <section></section>
-    <SubscriptionSection />
+    <ServiceSubscription />
     <UserStatistics />
   </div>
 );
