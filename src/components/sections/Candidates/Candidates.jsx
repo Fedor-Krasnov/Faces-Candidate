@@ -1,5 +1,5 @@
 import React from 'react';
-import { UserCard } from '../../innerComponets/UserCard';
+import { UserCard } from '../../innerComponets';
 import { Title } from '../../units';
 import candidatesStyles from './Candidates.module.scss';
 

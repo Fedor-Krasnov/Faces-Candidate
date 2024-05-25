@@ -1,6 +1,5 @@
 import React from 'react';
-import { ServiceSubscription } from '../../innerComponets/ServiceSubscription';
-import { UserStatistics } from '../../innerComponets/UserStatistics';
+import { ServiceSubscription, UserStatistics } from '../../innerComponets';
 import userProfileStyles from './UserProfile.module.scss';
 
 const userProfileClassName = 'user-profile';
