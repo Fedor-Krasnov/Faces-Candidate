@@ -1,12 +1,11 @@
 import React from 'react';
-import { userProfileData } from '../../../mocks/sections/index.js';
-import { Button, Title } from '../../units/index.js';
+import { Button, Title } from '../../units';
 import serviceSubscriptionStyles from './ServiceSubscription.module.scss';
 
 const serviceSubscriptionClassName = 'service-subscription';
 
-const ServiceSubscription = () => {
-  const { titleSubscribe, buttonTitle, subscriptionContent } = userProfileData;
+const ServiceSubscription = ({ content }) => {
+  const { titleSubscribe, buttonTitle, subscriptionContent } = content;
 
   return (
     <div className={serviceSubscriptionStyles[serviceSubscriptionClassName]}>
@@ -22,8 +21,8 @@ const ServiceSubscription = () => {
             className={serviceSubscriptionStyles[`${serviceSubscriptionClassName}__subscription-offers`]}
           >
             <div>
-              <p dangerouslySetInnerHTML={{ __html: validity }} />
-              <p dangerouslySetInnerHTML={{ __html: price }} />
+              <p dangerouslySetInnerHTML={{ __html: String(validity) }} />
+              <p dangerouslySetInnerHTML={{ __html: String(price) }} />
             </div>
             <Button title={buttonTitle} />
           </div>

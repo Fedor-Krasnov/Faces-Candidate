@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { userProfileData } from '../../../mocks/sections/index.js';
-import { Title } from '../../units/index.js';
+import { Title } from '../../units';
 import userStatisticsStyles from './UserStatistics.module.scss';
 
 const userStatisticsClassName = 'user-statistics';
 
-const UserStatistics = () => {
+const UserStatistics = ({ content }) => {
   const {
     titleStatistic,
     titleButtonContact,
@@ -16,7 +15,7 @@ const UserStatistics = () => {
     numberLimitCandidates,
     currentAmountCandidates,
     titleButtonCandidate,
-  } = userProfileData;
+  } = content;
 
   return (
     <div className={userStatisticsStyles[userStatisticsClassName]}>

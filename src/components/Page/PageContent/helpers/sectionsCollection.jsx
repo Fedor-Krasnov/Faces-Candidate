@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { sectionTypeToComponentMap } from '../../../sections/sections';
+import { sectionTypeToComponentMap } from '../../../sections/sectionTypes.js';
 import { pageContentSectionClassName } from '../../constants';
 import pageContentStyles from '../PageContent.module.scss';
 

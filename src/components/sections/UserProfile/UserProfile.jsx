@@ -4,13 +4,15 @@ import userProfileStyles from './UserProfile.module.scss';
 
 const userProfileClassName = 'user-profile';
 
-// TODO: Добавить данные с бэка с помощью content
+const UserProfile = ({ content }) => {
+  const { userData } = content;
 
-const UserProfile = () => (
-  <div className={userProfileStyles[userProfileClassName]}>
-    <ServiceSubscription />
-    <UserStatistics />
-  </div>
-);
+  return (
+    <div className={userProfileStyles[userProfileClassName]}>
+      <ServiceSubscription content={content} />
+      <UserStatistics content={content} />
+    </div>
+  );
+};
 
 export { UserProfile };

@@ -4,6 +4,7 @@ import {
   candidatesData,
   directionOfWorkData,
   subscribeToTheDatabaseData,
+  userProfileData,
 } from '../sections';
 
 export const pages = [
@@ -40,13 +41,13 @@ export const pages = [
   {
     pathname: '/user-profile',
     seo: {
-      title: 'User profile - Faces-Candidate',
+      title: 'User profile – Faces-Candidate',
       description: '',
       keywords: '',
     },
     sections: [
       {
-        content: '',
+        content: userProfileData,
         type: 'user-profile',
       },
     ],

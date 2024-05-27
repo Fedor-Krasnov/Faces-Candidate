@@ -1,4 +1,11 @@
 export const userProfileData = {
+  userData: {
+    username: '',
+    subscriptionData: {
+      date: '',
+      card: '',
+    },
+  },
   currentAmountSubscribe: '0',
   currentAmountCandidates: '0',
   numberLimitSubscribe: '50',
