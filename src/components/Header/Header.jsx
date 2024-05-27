@@ -13,7 +13,6 @@ import { UserPanel } from './UserPanel';
 const headerClassName = 'header';
 
 const Header = () => {
-  const isLogged = true;
   const { isBreakpointLg } = useMobileVersion();
   const [isModalMenuOpen, setIsModalMenuOpen] = useState(false);
 
@@ -35,7 +34,7 @@ const Header = () => {
               </div>
               <div className={headerStyles[`${headerClassName}__top-level-column`]}>
                 <SearchBox />
-                <UserPanel isLogged={isLogged} />
+                <UserPanel />
               </div>
             </>
           )}

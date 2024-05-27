@@ -1,4 +1,5 @@
 import React from 'react';
+import { Avatar } from '../../units';
 import userDataStyles from './UserData.module.scss';
 
 const userDataClassName = 'user-data';
@@ -8,7 +9,13 @@ const UserData = ({ content }) => {
 
   return (
     <div className={userDataStyles[userDataClassName]}>
-      <div>userdata</div>
+      <div className={userDataStyles[`${userDataClassName}__username`]}>
+        <Avatar username={username} />
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
     </div>
   );
 };

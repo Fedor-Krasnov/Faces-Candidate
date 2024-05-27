@@ -1,3 +1,4 @@
+export { Avatar } from './Avatar';
 export { BlockContainer } from './BlockContainer';
 export { Button } from './Button';
 export { Icon } from './Icon';

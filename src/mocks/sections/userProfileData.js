@@ -1,6 +1,6 @@
 export const userProfileData = {
   userData: {
-    username: '',
+    username: 'Fedor Krasnov',
     subscriptionData: {
       date: '',
       card: '',

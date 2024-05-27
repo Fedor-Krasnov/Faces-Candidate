@@ -31,22 +31,10 @@
     justify-content: center;
 
     span {
-      &:first-child {
-        background-color: var(--user-color);
-        border-radius: 100%;
-        width: 40px;
-        height: 40px;
-        display: inherit;
-        align-items: inherit;
-        justify-content: inherit;
-      }
-
-      &:last-child {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        max-width: 120px;
-      }
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: 120px;
     }
   }
 
