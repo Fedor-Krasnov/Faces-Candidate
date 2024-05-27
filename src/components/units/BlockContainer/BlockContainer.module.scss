@@ -1,0 +1,7 @@
+@use '/src/assets/styles/variables/colors';
+
+.block-container {
+  background-color: colors.$white;
+  border-radius: 15px;
+  padding: 30px 40px;
+}

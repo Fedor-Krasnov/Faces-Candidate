@@ -1,5 +1,6 @@
 import React from 'react';
-import { ServiceSubscription, UserStatistics } from '../../innerComponets';
+import { ServiceSubscription, UserStatistics, UserData } from '../../innerComponets';
+import { BlockContainer } from '../../units/index.js';
 import userProfileStyles from './UserProfile.module.scss';
 
 const userProfileClassName = 'user-profile';
@@ -9,8 +10,15 @@ const UserProfile = ({ content }) => {
 
   return (
     <div className={userProfileStyles[userProfileClassName]}>
-      <ServiceSubscription content={content} />
-      <UserStatistics content={content} />
+      <BlockContainer>
+        <UserData content={userData} />
+      </BlockContainer>
+      <BlockContainer>
+        <ServiceSubscription content={content} />
+      </BlockContainer>
+      <BlockContainer>
+        <UserStatistics content={content} />
+      </BlockContainer>
     </div>
   );
 };
